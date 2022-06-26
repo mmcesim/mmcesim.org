@@ -7,7 +7,6 @@ has_children: false
 
 # Task-Oriented mmWave Channel Estimation
 The application mmCEsim is a powerful tool to simulate millimeter wave (mmWave) channel estimation (CE) for both experts and learners.
-Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
 {: .fs-6 .fw-300 }
 
 [View it on GitHub](https://github.com/mmcesim){: .btn .fs-5 .mb-4 .mb-md-0 }
