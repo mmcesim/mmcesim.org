@@ -9,6 +9,7 @@ has_children: false
 The application mmCEsim is a powerful tool to simulate millimeter wave (mmWave) channel estimation (CE) for both experts and learners.
 {: .fs-6 .fw-300 }
 
+[Try the Web App](https://app.mmcesim.org){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [View it on GitHub](https://github.com/mmcesim){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ***
