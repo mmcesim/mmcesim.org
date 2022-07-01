@@ -13,7 +13,7 @@ also known as [Teddy van Jerry](https://github.com/Teddy-van-Jerry) on GitHub.
 ## Biography
 
 **Wuqiong Zhao** (*Student Member, IEEE*)
-is an undergraduate student pursuing the Bachelor's Degree in information science, working at Lab of Efficient Architectures for Digital-communication and Signal-processing (LEADS) and National Mobile Communications Research Laboratory, Southeast University.
+is an undergraduate student pursuing the Bachelor's Degree in information engineering, working at Lab of Efficient Architectures for Digital-communication and Signal-processing (LEADS) and National Mobile Communications Research Laboratory, Southeast University.
 He is the honors (number one) student of Chien-Shiung Wu College which is a pilot college and training ground in Southeast University to cultivate top-notch undergraduate students selected from multiple science and engineering departments.
 He earned the National Scholarship and Cyrus Tang Scholarship in 2021.
 His research interest includes channel estimation, Bayesian algorithms, and the intelligent reflecting surface (IRS) in wireless communication of 5G and 6G.
