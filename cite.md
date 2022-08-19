@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Citation
+permalink: /cite/
 nav_order: 2
 has_children: false
 ---

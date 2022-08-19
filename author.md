@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Author
+permalink: /author/
 nav_order: 3
 has_children: false
 ---
