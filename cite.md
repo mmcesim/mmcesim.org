@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Citation
-permalink: /cite/
-nav_order: 2
+permalink: /cite
+nav_order: 3
 has_children: false
 ---
 

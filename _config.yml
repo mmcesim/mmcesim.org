@@ -48,3 +48,21 @@ nav_external_links:
     url: https://app.mmcesim.org
   - title: mmCEsim Blog
     url: https://blog.mmcesim.org
+
+callouts:
+  warning:
+    title: Warning
+  hint:
+    title: Hint
+  important:
+    title: Important
+  note:
+    title: Note
+  tip:
+    title: Tip
+  caution:
+    title: Caution
+  error:
+    title: Error
+  attention:
+    title: Attention
