@@ -83,10 +83,9 @@ Please refer to the specific documentation for each function.
 ## COMMENT
 Place a line of comment in the exported code.
 
-<details>
-  <summary>
-    Example
-  </summary>
+### Example
+{: .no_toc }
+
 <div class="code-example" markdown="1">
 
 C++
@@ -108,7 +107,6 @@ Matlab/Octave
 ```
 COMMENT Hi, this is a comment!
 ```
-</details>
 
 ## ELSE
 
