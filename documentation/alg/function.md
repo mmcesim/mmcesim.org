@@ -32,8 +32,8 @@ The language is specially designed so that it can be exported to C++
 Every line of ALG language calls a function.
 Let's first have a look at its basic structure before we cover its details.
 
-```
-ret1::type1 ret2 = FUNC param1 param2::type2 key1=value1 key2=value2::type3
+```sh
+ret1::type1 ret2 = FUNC param1 param2::type2 key1=value1 key2=value2::type3 # comments
 ```
 
 It may look like an assembly language at the first glance,
@@ -68,6 +68,7 @@ Here are some basic rules:
   [data type of ALG language](type).
 - Like Python, the backslash (`\`) at the end of the line can be used for continuing
   the function on next line.
+- Comments start with the hash (`#`) like Python.
 
 {: .caution }
 There should be no space around the `=` between key and value for parameters.
@@ -82,6 +83,16 @@ Please refer to the specific documentation for each function.
 
 ## COMMENT
 Place a line of comment in the exported code.
+
+### Explanations
+{: .no_toc }
+
+All contents after the function keyword `COMMENT` are considered as comments.
+
+{: note }
+In the current version,
+all spaces in the comment between words will be changed into one whitespace.
+In future releases, comment text will remain its original style.
 
 ### Example
 {: .no_toc }
