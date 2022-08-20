@@ -81,14 +81,12 @@ Please refer to the specific documentation for each function.
 ## CALC
 
 ## COMMENT
-Print a line of comment in the exported code.
+Place a line of comment in the exported code.
 
-### Example
-{: .no_toc }
-
-```
-COMMENT Hi, this is a comment!
-```
+<details>
+  <summary>
+    Example
+  </summary>
 <div class="code-example" markdown="1">
 
 C++
@@ -102,11 +100,15 @@ Python
 ```
 
 Matlab/Octave
-```m
+```matlab
 % Hi, this is a comment!
 ```
 
 </div>
+```
+COMMENT Hi, this is a comment!
+```
+</details>
 
 ## ELSE
 
