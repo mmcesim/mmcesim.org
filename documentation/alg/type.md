@@ -1,11 +1,13 @@
 ---
 layout: default
-title: Function
+title: Data Type
 permalink: /doc/alg/type
 nav_order: 2
+parent: ALG Language
+grand_parent: Documentation
 has_children: false
 ---
 
-# Function of ALG Language
+# Data Type of ALG Language
 
-Function ...
+Data type ...
