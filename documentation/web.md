@@ -4,7 +4,7 @@ title: Web Application
 permalink: /doc/web
 nav_order: 3
 parent: Documentation
-has_children: true
+has_children: false
 ---
 
 # Web Application

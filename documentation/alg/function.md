@@ -23,7 +23,6 @@ has_children: false
 ***
 
 ## Syntax Basics
-{: .no_toc }
 
 The initiative of proposing a new programming language for algorithm
 implementation is based on the multi-backend design of mmCEsim.
@@ -57,10 +56,11 @@ Here are some basic rules:
     corresponding value. `value1` and `value2` are passed in using this method.
     It should be noted that there should be no space around the `=` between key and value for parameters.
 
-  There are some special cases that
+  There are some special cases that parameters are viewed as a whole,
+  for example [`COMMENT`](#comment) and [`CALC`](#calc).
 - If a 
 
-{ .caution }
+{: .caution }
 There should be no space around the `=` between key and value for parameters.
 For example, `key=val` is valid while `key = val` is forbidden.
 
