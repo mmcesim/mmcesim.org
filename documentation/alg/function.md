@@ -89,7 +89,7 @@ Place a line of comment in the exported code.
 
 All contents after the function keyword `COMMENT` are considered as comments.
 
-{: note }
+{: .note }
 In the current version,
 all spaces in the comment between words will be changed into one whitespace.
 In future releases, comment text will remain its original style.
