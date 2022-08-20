@@ -63,12 +63,18 @@ Here are some basic rules:
   C++ and Python.
 - You may optionally specify the type of return value and parameters with `::`
   after the value. For example, in the above example `dtype1`, `dtype2` and `dtype3`
-  are type specifications for `ret1`, `param2` and `value2` respectively.
-  For more information about data type, please refer to [data type of ALG language](type).
+  are type specifications for `ret1`, `param2` and `value2`, respectively.
+  For more information about data type, please refer to
+  [data type of ALG language](type).
+- Like Python, the backslash (`\`) at the end of the line can be used for continuing
+  the function on next line.
 
 {: .caution }
 There should be no space around the `=` between key and value for parameters.
 For example, `key=val` is valid while `key = val` is forbidden.
+
+Special rules may be applied for different functions.
+Please refer to the specific documentation for each function.
 
 ***
 
@@ -76,6 +82,31 @@ For example, `key=val` is valid while `key = val` is forbidden.
 
 ## COMMENT
 Print a line of comment in the exported code.
+
+### Example
+{: .no_toc }
+
+```
+COMMENT Hi, this is a comment!
+```
+<div class="code-example" markdown="1">
+
+C++
+```cpp
+// Hi, this is a comment!
+```
+
+Python
+```py
+# Hi, this is a comment!
+```
+
+Matlab/Octave
+```m
+% Hi, this is a comment!
+```
+
+</div>
 
 ## ELSE
 

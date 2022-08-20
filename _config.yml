@@ -67,10 +67,10 @@ callouts:
     color: blue
   caution:
     title: Caution
-    color: pink
+    color: red
   error:
     title: Error
-    color: red
+    color: pink
   attention:
     title: Attention
     color: purple
