@@ -136,7 +136,7 @@ Initialize a variable.
 C++
 ```cpp
 cx_mat a = (4) * arma::ones<cx_mat>(4, 3);
-cx_mat b = (-1+i) * arma::zeros<cx_mat>(1, 10);
+cx_mat b = (-1 + i) * arma::zeros<cx_mat>(1, 10);
 const double pi = 3.1415926;
 std::complex<double> random_number = (-2) * arma::randn<std::complex<double>>();
 ```
