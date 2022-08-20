@@ -11,6 +11,9 @@ has_children: false
 Find mmCEsim useful to your research?
 You may consider citing it:
 
+{: .attention-title }
+> Citation (IEEE Plain Text)
+>
 > [1] W. Zhao, “mmCEsim: Tasked-oriented millimeter wave channel estimation,” *Zenodo*, Jul. 2022, doi: [10.5281/zenodo.6912824](https://doi.org/10.5281/zenodo.6912824).
 
 <!-- {% raw %} -->
