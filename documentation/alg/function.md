@@ -128,6 +128,27 @@ COMMENT Hi, this is a comment!
 ## INIT
 Initialize a variable.
 
+### Example
+{: .no_toc }
+
+<div class="code-example" markdown="1">
+
+C++
+```cpp
+cx_mat a = (4) * arma::ones<cx_mat>(4, 3);
+cx_mat b = (-1+i) * arma::zeros<cx_mat>(1, 10);
+const double pi = 3.1415926;
+std::complex<double> random_number = (-2) * arma::randn<std::complex<double>>();
+```
+
+</div>
+```sh
+a = INIT 4 3 fill=ones scale=4 dtype=c # a matrix
+b::r = INIT 10 scale="-1+i" # row vector (viewed as a matrix)
+pi::f0c = INIT 3.1415926 # a const float
+random_number = INIT fill=randn scale=-2
+```
+
 ## FOR
 
 ## FOREVER
