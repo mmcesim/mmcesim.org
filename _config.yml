@@ -52,17 +52,25 @@ nav_external_links:
 callouts:
   warning:
     title: Warning
+    color: yellow
   hint:
     title: Hint
+    color: grey-lt
   important:
     title: Important
+    color: green
   note:
     title: Note
+    color: grey-dk
   tip:
     title: Tip
+    color: blue
   caution:
     title: Caution
+    color: pink
   error:
     title: Error
+    color: red
   attention:
     title: Attention
+    color: purple

@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Function
-permalink: /doc/alg/function
+permalink: /doc/alg/type
 nav_order: 2
-has_children: true
+has_children: false
 ---
 
 # Function of ALG Language
