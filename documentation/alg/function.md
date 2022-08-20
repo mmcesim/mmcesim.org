@@ -33,7 +33,7 @@ Every line of ALG language calls a function.
 Let's first have a look at its basic structure before we cover its details.
 
 ```
-ret1::type1 ret2 = FUNC param1 param2::type1 key1=value1 key2=value2
+ret1::type1 ret2 = FUNC param1 param2::type2 key1=value1 key2=value2::type3
 ```
 
 It may look like an assembly language at the first glance,
@@ -54,11 +54,17 @@ Here are some basic rules:
     This is the only way in C++.
   2. **key and value**: Parameters can also be specified using key and its
     corresponding value. `value1` and `value2` are passed in using this method.
-    It should be noted that there should be no space around the `=` between key and value for parameters.
+    It should be noted that there should be no space around the `=` between key and value.
 
   There are some special cases that parameters are viewed as a whole,
   for example [`COMMENT`](#comment) and [`CALC`](#calc).
-- If a 
+- If a parameter contains space or special characters, you need to use the
+  double quotes like `"param with space"` and escape special characters as in
+  C++ and Python.
+- You may optionally specify the type of return value and parameters with `::`
+  after the value. For example, in the above example `dtype1`, `dtype2` and `dtype3`
+  are type specifications for `ret1`, `param2` and `value2` respectively.
+  For more information about data type, please refer to [data type of ALG language](type).
 
 {: .caution }
 There should be no space around the `=` between key and value for parameters.
@@ -69,7 +75,7 @@ For example, `key=val` is valid while `key = val` is forbidden.
 ## CALC
 
 ## COMMENT
-This function will print a line of comment in the exported code.
+Print a line of comment in the exported code.
 
 ## ELSE
 
@@ -78,13 +84,14 @@ This function will print a line of comment in the exported code.
 ## END
 
 ## INIT
+Initialize a variable.
 
 ## FOR
 
 ## FOREVER
 
-## PRINT
-
 ## LOOP
+
+## PRINT
 
 ## WHILE
