@@ -196,7 +196,7 @@ In Matlab/Octave, it is the `end` specification.
 ### Example
 {: .no_toc }
 
-[Example with `INIT`](#for).
+[Example with `FOR`](#for).
 
 ***
 
@@ -227,8 +227,8 @@ The initialization target can be specified in two ways:
 | Position | Parameter Key | Descriptions |
 | :-: | :-: | :- |
 | 1 | `dim1` | Size of the first dimension (for vector). | 
-| 2 | `dim2` | Size of the first dimension (for vector and matrix). | 
-| 3 | `dim3` | Size of the first dimension (for vector, matrix and tensor). |
+| 2 | `dim2` | Size of the second dimension (for vector and matrix). | 
+| 3 | `dim3` | Size of the third dimension (for vector, matrix and tensor). |
 | 4 | `fill` | Element filling mode. `randn` for standard normal distribution $$\mathcal{N}(0, 1)$$, `randu` for standard uniform distribution $$\mathcal{U}(0, 1)$$, `zeros` for filling as 0, `ones` for filling as 1. Default option is `zeros`. |
 | 5 | `scale` | Scale of the value. This works like multiplying a value after the initialization by `fill`. |
 
