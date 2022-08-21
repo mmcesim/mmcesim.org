@@ -166,7 +166,7 @@ Matlab/Octave
 ```
 
 </div>
-```
+```ruby
 COMMENT Hi, this is a comment!
 ```
 
