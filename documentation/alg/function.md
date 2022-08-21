@@ -182,7 +182,6 @@ COMMENT Hi, this is a comment!
 ***
 
 ## END
-{: .no_toc }
 
 End of a block (for [`ELSE`](#else), [`ELIF`](#elif), [`FOR`](#for),
 [`FOREVER`](#forever), [`LOOP`](#loop), [`WHILE`](#while)).
@@ -195,6 +194,8 @@ in Python it is the indentation goes back for one block.
 In Matlab/Octave, it is the `end` specification.
 
 ### Example
+{: .no_toc }
+
 [Example with `INIT`](#for).
 
 ***
@@ -223,7 +224,7 @@ The initialization target can be specified in two ways:
 > you can still specify its dimension with only one parameter on `dim1`.
 > For a scalar initialization, the value can directly follow `=`.
 
-| Pos | Parameter Key | Descriptions |
+| Position | Parameter Key | Descriptions |
 | :-: | :-: | :- |
 | 1 | `dim1` | Size of the first dimension (for vector). | 
 | 2 | `dim2` | Size of the first dimension (for vector and matrix). | 
