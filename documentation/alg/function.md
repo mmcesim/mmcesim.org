@@ -120,7 +120,7 @@ arma::exp2(a + c % d) / e.st() - f(arma::span::all, 3, arma::span(1, index));
 
 </div>
 <!-- {% raw %} -->
-```sh
+```ruby
 a = CALC b + 2 # explicit CALC function
 a = \sin(b) @ c # implicit CALC function
 a = b^H + c^{-1} # conjugate transpose and inverse
@@ -201,7 +201,7 @@ std::complex<double> random_number = (-2) * arma::randn<std::complex<double>>();
 ```
 
 </div>
-```sh
+```ruby
 a = INIT 4 3 fill=ones scale=4 dtype=c # a matrix
 b::r = INIT 10 scale="-1+i" # row vector (viewed as a matrix)
 pi::f0c = INIT 3.1415926 # a const float
