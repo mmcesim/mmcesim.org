@@ -80,6 +80,21 @@ Please refer to the specific documentation for each function.
 
 ***
 
+## BREAK
+Break from a block (for [`FOR`](#for), [`FOREVER`](#forever), [`LOOP`](#loop), [`WHILE`](#while)).
+
+### Explanations
+{: .no_toc }
+
+The same as `break` in C++, Python and Matlab/Octave.
+
+### Example
+{: .no_toc }
+
+[Example with `FOREVER`](#forever).
+
+***
+
 ## CALC
 Make arithmetic calculations.
 
@@ -196,7 +211,11 @@ In Matlab/Octave, it is the `end` specification.
 ### Example
 {: .no_toc }
 
-[Example with `FOR`](#for).
+[Example with `FOR`](#for), [Example with `FOREVER`](#forever), [Example with `WHILE`](#while).
+
+***
+
+## IF
 
 ***
 
@@ -305,6 +324,26 @@ END
 ***
 
 ## FOREVER
+Repeat in the block until [`BREAK`](#break).
+
+### Example
+{: .no_toc }
+
+<div class="code-example" markdown="1">
+
+C++
+```cpp
+while (1) {
+    break;
+} 
+```
+
+</div>
+```ruby
+FOREVER # takes no param
+  BREAK # Wow, nothing is done when I just break here [Lol]
+END
+```
 
 ***
 
@@ -318,3 +357,32 @@ Print the contents.
 ***
 
 ## WHILE
+Repeat while the condition satisfies.
+
+### Explanations
+{: .no_toc }
+
+This is the same as C++, Python and Matlab/Octave.
+The function takes only one parameter.
+(If you do need a key value style, it has key `cond`.)
+
+{: .tip }
+Since only one parameter is needed,
+all contents after the `WHILE` keyword is viewed as the stop condition.
+So there is no need to quote the condition which is required in [`FOR`](#for).
+
+<div class="code-example" markdown="1">
+
+C++
+```cpp
+while (i != 100 && result == false) {
+    // Do something in the while loop.
+}
+```
+
+</div>
+```ruby
+WHILE i != 100 && result == false # no quote is needed because there will be only one param
+  COMMENT "Do something in the while loop."
+END
+```
