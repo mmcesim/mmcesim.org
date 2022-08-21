@@ -32,7 +32,7 @@ The language is specially designed so that it can be exported to C++
 Every line of ALG language calls a function.
 Let's first have a look at its basic structure before we cover its details.
 
-```sh
+```ruby
 ret1::type1 ret2 = FUNC param1 param2::type2 key1=value1 key2=value2::type3 # comments
 ```
 
@@ -120,7 +120,7 @@ arma::exp2(a + c % d) / e.st() - f(arma::span::all, 3, arma::span(1, index));
 
 </div>
 <!-- {% raw %} -->
-```
+```ruby
 a = CALC b + 2 # explicit CALC function
 a = \sin(b) @ c # implicit CALC function
 a = b^H + c^{-1} # conjugate transpose and inverse
@@ -200,20 +200,20 @@ const double pi = 3.1415926;
 std::complex<double> random_number = (-2) * arma::randn<std::complex<double>>();
 ```
 
-</div>
-```ruby
-a = INIT 4 3 fill=ones scale=4 dtype=c # a matrix
-b::r = INIT 10 scale="-1+i" # row vector (viewed as a matrix)
-pi::f0c = INIT 3.1415926 # a const float
-random_number = INIT fill=randn scale=-2
-```
-
 ```js
 // Javascript code with syntax highlighting.
 var fun = function lang(l) {
   dateformat.i18n = require('./lang/' + l)
   return true;
 }
+```
+
+</div>
+```ruby
+a = INIT 4 3 fill=ones scale=4 dtype=c # a matrix
+b::r = INIT 10 scale="-1+i" # row vector (viewed as a matrix)
+pi::f0c = INIT 3.1415926 # a const float
+random_number = INIT fill=randn scale=-2
 ```
 
 ***
