@@ -73,7 +73,7 @@ Here are some basic rules:
 
 {: .caution }
 There should be no space around the `=` between key and value for parameters.
-For example, `key=val` is valid while `key = val` is forbidden.$
+For example, `key=val` is valid while `key = val` is forbidden.
 
 Special rules may be applied for different functions.
 Please refer to the specific documentation for each function.
