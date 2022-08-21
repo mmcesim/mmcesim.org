@@ -6,6 +6,7 @@ parent: ALG Language
 grand_parent: Documentation
 nav_order: 2
 has_children: false
+mathjax: true
 ---
 
 # Function of ALG Language
@@ -72,7 +73,7 @@ Here are some basic rules:
 
 {: .caution }
 There should be no space around the `=` between key and value for parameters.
-For example, `key=val` is valid while `key = val` is forbidden.
+For example, `key=val` is valid while `key = val` is forbidden.$
 
 Special rules may be applied for different functions.
 Please refer to the specific documentation for each function.
@@ -181,8 +182,10 @@ COMMENT Hi, this is a comment!
 ***
 
 ## END
+{: .no_toc }
+
 End of a block (for [`ELSE`](#else), [`ELIF`](#elif), [`FOR`](#for),
-[`FOREVER`](#forever), [`LOOP`(#loop)], [`WHILE`](#while)).
+[`FOREVER`](#forever), [`LOOP`](#loop), [`WHILE`](#while)).
 
 ### Explanations
 {: .no_toc }
@@ -220,15 +223,17 @@ The initialization target can be specified in two ways:
 > you can still specify its dimension with only one parameter on `dim1`.
 > For a scalar initialization, the value can directly follow `=`.
 
-| Position | Parameter Key | Descriptions |
+| Pos | Parameter Key | Descriptions |
 | :-: | :-: | :- |
 | 1 | `dim1` | Size of the first dimension (for vector). | 
 | 2 | `dim2` | Size of the first dimension (for vector and matrix). | 
 | 3 | `dim3` | Size of the first dimension (for vector, matrix and tensor). |
-| 4 | `fill` | Element filling mode. `randn` for standard normal distribution $\mathcal{N}(0, 1)$, `randu` for standard uniform distribution $\mathcal{U}(0, 1)$, `zeros` for filling as 0, `ones` for filling as 1. |
+| 4 | `fill` | Element filling mode. `randn` for standard normal distribution $$\mathcal{N}(0, 1)$$, `randu` for standard uniform distribution $$\mathcal{U}(0, 1)$$, `zeros` for filling as 0, `ones` for filling as 1. Default option is `zeros`. |
+| 5 | `scale` | Scale of the value. This works like multiplying a value after the initialization by `fill`. |
 
-
-For initialization of a 
+For initialization of a row vector (`r`), you may just use one dimension.
+For initialization of a scalar (dimension as 0), you can specify the value directly after `=`,
+but if you want to use `fill` and `scale`, you must specify the parameter key.
 
 {: .tip }
 Since the development of ALG concentrates on matrix operations,
