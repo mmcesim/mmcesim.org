@@ -200,14 +200,6 @@ const double pi = 3.1415926;
 std::complex<double> random_number = (-2) * arma::randn<std::complex<double>>();
 ```
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
 </div>
 ```ruby
 a = INIT 4 3 fill=ones scale=4 dtype=c # a matrix
