@@ -91,7 +91,7 @@ There are two kinds of `CALC` usage: **inline** and **standalone**.
 - **standalone**: This is like a normal function, with function name as `CALC`.
   You may also omit the function name `CALC` since it is the default function name
   if nothing is specified.
-  Therefore `result = CALC your expression` is equivalent to `result = your expression`.
+  Therefore, `result = CALC your expression` is equivalent to `result = your expression`.
 
 For more information about the `CALC` usage,
 please refer to [CALC details](calc).
@@ -181,11 +181,60 @@ COMMENT Hi, this is a comment!
 ***
 
 ## END
+End of a block (for [`ELSE`](#else), [`ELIF`](#elif), [`FOR`](#for),
+[`FOREVER`](#forever), [`LOOP`(#loop)], [`WHILE`](#while)).
+
+### Explanations
+{: .no_toc }
+
+In C++, this functions as `}`,
+in Python it is the indentation goes back for one block.
+In Matlab/Octave, it is the `end` specification.
+
+### Example
+[Example with `INIT`](#for).
 
 ***
 
 ## INIT
 Initialize a variable.
+
+### Explanations
+{: .no_toc }
+
+This function can initialize a **scalar**, a **vector**, a **matrix** and a **tensor**.
+The initialization target can be specified in two ways:
+- **return value type specification**: You can specify the type of the variable to be
+  initialized by `::`.
+- **parameters**: Parameter `dtype` is used for element type,
+  and `dim1`, `dim2`, `dim3` are used for dimension specification.
+
+{: .warning }
+> Please be **consistent**!
+> The current implementation of the function is fragile and can be fooled by
+> any inconsistent actions. While we are trying to enhance the error detection,
+> you are advised to use the correct dimension.
+>
+> However, there are also a few exceptions for user's convenience.
+> Though row vector (`r`) is regarded as a matrix,
+> you can still specify its dimension with only one parameter on `dim1`.
+> For a scalar initialization, the value can directly follow `=`.
+
+| Position | Parameter Key | Descriptions |
+| :-: | :-: | :- |
+| 1 | `dim1` | Size of the first dimension (for vector). | 
+| 2 | `dim2` | Size of the first dimension (for vector and matrix). | 
+| 3 | `dim3` | Size of the first dimension (for vector, matrix and tensor). |
+| 4 | `fill` | Element filling mode. `randn` for standard normal distribution $\mathcal{N}(0, 1)$, `randu` for standard uniform distribution $\mathcal{U}(0, 1)$, `zeros` for filling as 0, `ones` for filling as 1. |
+
+
+For initialization of a 
+
+{: .tip }
+Since the development of ALG concentrates on matrix operations,
+the initialization also performs in a matrix-oriented way.
+Please refer to [data type of ALG language](type) is you are not sure
+how the data type works.
 
 ### Example
 {: .no_toc }
@@ -224,7 +273,7 @@ Start a `for` loop.
 ***
 
 ## PRINT
-Print the contents
+Print the contents.
 
 ***
 
