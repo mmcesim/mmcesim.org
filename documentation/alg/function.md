@@ -87,6 +87,7 @@ Break from a block (for [`FOR`](#for), [`FOREVER`](#forever), [`LOOP`](#loop), [
 {: .no_toc }
 
 The same as `break` in C++, Python and Matlab/Octave.
+This function takes no parameter.
 
 ### Example
 {: .no_toc }
@@ -370,6 +371,9 @@ The function takes only one parameter.
 Since only one parameter is needed,
 all contents after the `WHILE` keyword is viewed as the stop condition.
 So there is no need to quote the condition which is required in [`FOR`](#for).
+
+### Example
+{: .no_toc }
 
 <div class="code-example" markdown="1">
 
