@@ -80,6 +80,57 @@ Please refer to the specific documentation for each function.
 ***
 
 ## CALC
+Make arithmetic calculations.
+
+### Explanations
+{: .no_toc }
+
+There are two kinds of `CALC` usage: **inline** and **standalone**.
+- **inline**: The contents to be calculated are placed in a set of dollar signs,
+  like LaTeX syntax: `$some operations to be calculated$`.
+- **standalone**: This is like a normal function, with function name as `CALC`.
+  You may also omit the function name `CALC` since it is the default function name
+  if nothing is specified.
+  Therefore `result = CALC your expression` is equivalent to `result = your expression`.
+
+For more information about the `CALC` usage,
+please refer to [CALC details](calc).
+
+{: .note }
+In the current version, all spaces inside `CALC` are eliminated,
+so string operations should be avoided.
+
+{: .warning }
+For safety, you should not use anything other than ANSI characters in `CALC` functions.
+Otherwise, there can be undefined behaviour.
+
+### Example
+{: .no_toc }
+
+<div class="code-example" markdown="1">
+
+C++
+```cpp
+a = arma::sin(b) * c;
+a = b.t() + c.i();
+c = b(2, 3);
+c = arma::abs(b(arma::span::all, 3)) + arma::pow(b, 2);
+arma::exp2(a + c % d) / e.st() - f(arma::span::all, 3, arma::span(1, index));
+```
+
+</div>
+<!-- {% raw %} -->
+```sh
+a = CALC b + 2 # explicit CALC function
+a = \sin(b) @ c # implicit CALC function
+a = b^H + c^{-1} # conjugate transpose and inverse
+c = b_{2, 3} # get element of a matrix
+c = \abs{b_{:, 3}} + \pow(b_{}, 2) # use : in subscript & use {} for function
+\exp2(a + c .* d) ./ e^T -f_{:,3,1:index} # element-wise operator and subscript : range
+```
+<!-- {% endraw %} -->
+
+***
 
 ## COMMENT
 Place a line of comment in the exported code.
@@ -119,11 +170,19 @@ Matlab/Octave
 COMMENT Hi, this is a comment!
 ```
 
+***
+
 ## ELSE
+
+***
 
 ## ELIF
 
+***
+
 ## END
+
+***
 
 ## INIT
 Initialize a variable.
@@ -149,12 +208,24 @@ pi::f0c = INIT 3.1415926 # a const float
 random_number = INIT fill=randn scale=-2
 ```
 
+***
+
 ## FOR
+Start a `for` loop.
+
+***
 
 ## FOREVER
 
+***
+
 ## LOOP
 
+***
+
 ## PRINT
+Print the contents
+
+***
 
 ## WHILE
