@@ -268,6 +268,40 @@ random_number = INIT fill=randn scale=-2
 ## FOR
 Start a `for` loop.
 
+### Explanations
+{: .no_toc }
+
+The parameters are similar to C++.
+
+| Position | Parameter Key | Descriptions |
+| :-: | :-: | :- |
+| 1 | `init` | Initialization before entering the loop. | 
+| 2 | `cond` | Condition to continue into the loop. | 
+| 3 | `oper` | Operation after each iteration. |
+
+{: .note }
+If there is `=` or other special characters inside your parameter or there exists space,
+do remember to place them inside double quotes (`"`).
+
+### Example
+{: .no_toc }
+
+<div class="code-example" markdown="1">
+
+C++
+```cpp
+for (uword i = 0; i != 10; i = i + 2) {
+    // Do something here in the for loop.
+}
+```
+
+</div>
+```ruby
+FOR "i::u0 = INIT 0" "i != 10" "i=i+2" # a for loop taking three parameters
+  COMMENT "Do something here in the for loop."
+END
+```
+
 ***
 
 ## FOREVER
