@@ -24,6 +24,8 @@ The application mmCEsim is a powerful tool to simulate millimeter wave (mmWave) 
 We offer a **task-oriented** simulation software for researchers to focus on algorithms only
 without being bothered by coding.
 
+![mmCEsim Workflow](https://img.mmcesim.org/design/workflow.png)
+
 ## Supported Platforms
 Linux, Windows, macOS.
 

@@ -349,6 +349,7 @@ END
 ***
 
 ## LOOP
+Loop with iteration counter.
 
 ***
 
