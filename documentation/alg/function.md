@@ -351,6 +351,37 @@ END
 ## LOOP
 Loop with iteration counter.
 
+### Example
+{: .no_toc }
+
+<div class="code-example" markdown="1">
+
+C++
+```cpp
+for (auto i = 0; i < 10; ++i) {
+    // 0, 1, 2, ..., 9
+    for (auto j = 10; j >= 0; --j) {
+        // 10, 9, 8, ..., 0
+    }
+    for (uword k = 0; k < 10; k += 2) {
+        // 0, 2, 4, 6, 8
+    }
+}
+```
+
+</div>
+```ruby
+LOOP 0 10 # implicit counter name as 'i'
+  COMMENT 0, 1, 2, ..., 9
+  j = LOOP from=10 to=0 step=-1
+    COMMENT 10, 9, 8, ..., 0
+  END
+  k::u0 = LOOP begin=0 end=10 step=2 # specify counter type
+    COMMENT 0, 2, 4, 6, 8
+  END
+END
+```
+
 ***
 
 ## PRINT
