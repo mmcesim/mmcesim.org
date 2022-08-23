@@ -355,7 +355,7 @@ The initialization target can be specified in two ways:
 | 3 | `dim3` | Size of the third dimension (for vector, matrix and tensor). |
 | 4 | `fill` | Element filling mode. `randn` for standard normal distribution $$\mathcal{N}(0, 1)$$, `randu` for standard uniform distribution $$\mathcal{U}(0, 1)$$, `zeros` for filling as 0, `ones` for filling as 1. Default option is `zeros`. |
 | 5 | `scale` | Scale of the value. This works like multiplying a value after the initialization by `fill`. |
-| 6 | `dtype` | Element data type. This is the one character [prefix](type#prefix) like `c`, `i`. The default value is complex (`c`). |
+| 6 | `dtype` | Element data type. This is the one character [prefix](type#basic-type-prefix) like `c`, `i`. The default value is complex (`c`). |
 
 For initialization of a row vector (`r`), you may just use one dimension.
 For initialization of a scalar (dimension as 0), you can specify the value directly after `=`,

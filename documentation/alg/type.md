@@ -63,6 +63,44 @@ Basic type just names the element type.
 
 #### Alias Prefix
 
+Alias prefixes not only set the element type,
+but also the dimension.
+They are the one character alias for a two-character type.
+
+| Alias Prefix | Type | Equivalent Two-character Type |
+| :-: | :-: | :-: |
+| `v` | Vector | `c1` |
+| `r` | Row Vector | `c2` |
+| `m` | Matrix | `c2` |
+| `t` | Tensor | `c3` |
+| `d` | Double | `f0` |
+
+{: .important }
+> `v`, `r`, `m` and `t` are all for **complex** types.
+> For a non-complex type, you need to use the normal two-character way.
+>
+> Row vector (`r`) is actually regarded as a matrix for simplicity,
+> so its dimension is still 2.
+> Only column vector (`c`) is the real vector.
+> But there can be differences in terms of [`INIT`](function#init),
+> so it should not be confused with `m`.
+
 ### Dimension
 
+Dimensions range from 0 to 3.
+
+| Dimension | Type | C++ Type |
+| :-: | :-: | :-: |
+| 0 | Scalar | -- |
+| 1 | Vector | [`Col`](http://arma.sourceforge.net/docs.html#Col) |
+| 2 | Matrix | [`Mat`](http://arma.sourceforge.net/docs.html#Mat) |
+| 3 | Tensor | [`Cube`](http://arma.sourceforge.net/docs.html#Cube) |
+
+{: .warning }
+Dimension for a scalar can not be omitted.
+
 ### Suffix
+
+| Suffix | Meaning | C++ | Python | Matlab/Octave |
+| :-: | :-: | :-: | :-: | :-: |
+| `c` | Constant | `const` | (None) | `persistent` |
