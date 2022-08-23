@@ -42,6 +42,8 @@ due to all parameters are separated by space.
 But it is actually much more convenient.
 Here are some basic rules:
 - All tokens are separated by space.
+- Function names are in all upper cases, like `CALC`, `WHILE`.
+- Indentation does not matter. Blocks are ended with `END`.
 - The function line is mainly composed of three parts:
   **return values**, **function name** and **parameters**,
   in the left to right direction.
@@ -216,17 +218,40 @@ CPP std::cout << "Stantard C++ Language!" << std::endl;
 ***
 
 ## ELSE
+Used in `IF` block.
+
+### Explanations
+{: .no_toc }
+
+This function implements as `else` in C++, Python and Matlab/Octave.
+There is no parameter for `ELSE` function.
+
+### Example
+{: .no_toc }
+
+Example with [`IF`](#if).
 
 ***
 
 ## ELIF
+Alias for the continuous `ELSE` and `IF`.
+
+### Explanations
+{: .no_toc }
+
+The parameter is the same as [`IF`](#if).
+
+### Example
+{: .no_toc }
+
+Example with `IF`(#if).
 
 ***
 
 ## END
 
 End of a block (for [`ELSE`](#else), [`ELIF`](#elif), [`FOR`](#for),
-[`FOREVER`](#forever), [`LOOP`](#loop), [`WHILE`](#while)).
+[`FOREVER`](#forever), [`IF`](#if), [`LOOP`](#loop), [`WHILE`](#while)).
 
 ### Explanations
 {: .no_toc }
@@ -238,11 +263,62 @@ In Matlab/Octave, it is the `end` specification.
 ### Example
 {: .no_toc }
 
-Example with [`FOR`](#for), [`FOREVER`](#forever), [`LOOP`](#loop), [`WHILE`](#while).
+Example with [`FOR`](#for), [`FOREVER`](#forever), [`IF`](#if),
+[`LOOP`](#loop), [`WHILE`](#while).
 
 ***
 
 ## IF
+Conditional statement.
+
+### Explanations
+{: .no_toc }
+
+This works the same as `if` in C++, Python, Matlab/Octave.
+All contents after the `IF` keyword are part of the condition.
+If you insist using the key value style, the key is `cond`.
+
+### Example
+{: .no_toc }
+
+<div class="code-example" markdown="1">
+
+C++
+```cpp
+if (arma::accu(arma::pow(arma::abs(A), 2)) > 0.1 * threshold) {
+    if (b < 0) {
+        b = 0;
+    } else if (b > 100) {
+        b = 100;
+    } else {
+        b = -b;
+    }
+} else {
+    if (c == d) {
+        A = A * 0.1;
+    }
+}
+```
+
+Python/Matlab/Octave
+> (Nothing)
+
+</div>
+```ruby
+IF \accu(\pow(\abs(A), 2)) > 0.1 * threshold
+  IF b < 0
+    b = 0
+  ELIF b > 100
+    b = 100
+  ELSE
+    b = -b
+  END
+ELSE
+  IF cond="c == d" # use key value style if you insist
+    A = A * 0.1
+  END
+END
+```
 
 ***
 
