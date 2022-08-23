@@ -218,7 +218,7 @@ CPP std::cout << "Stantard C++ Language!" << std::endl;
 ***
 
 ## ELSE
-Used in `IF` block.
+Used in [`IF`](#if) block.
 
 ### Explanations
 {: .no_toc }
@@ -234,7 +234,7 @@ Example with [`IF`](#if).
 ***
 
 ## ELIF
-Alias for the continuous `ELSE` and `IF`.
+Alias for the continuous [`ELSE`](#else) and [`IF`](#if).
 
 ### Explanations
 {: .no_toc }
@@ -244,7 +244,7 @@ The parameter is the same as [`IF`](#if).
 ### Example
 {: .no_toc }
 
-Example with `IF`(#if).
+Example with [`IF`](#if).
 
 ***
 
@@ -299,9 +299,6 @@ if (arma::accu(arma::pow(arma::abs(A), 2)) > 0.1 * threshold) {
     }
 }
 ```
-
-Python/Matlab/Octave
-> (Nothing)
 
 </div>
 ```ruby
