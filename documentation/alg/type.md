@@ -69,7 +69,7 @@ They are the one character alias for a two-character type.
 
 | Alias Prefix | Type | Equivalent Two-character Type |
 | :-: | :-: | :-: |
-| `v` | Vector | `c1` |
+| `v` | (Column) Vector | `c1` |
 | `r` | Row Vector | `c2` |
 | `m` | Matrix | `c2` |
 | `t` | Tensor | `c3` |

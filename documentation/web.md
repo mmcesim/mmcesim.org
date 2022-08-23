@@ -14,6 +14,8 @@ without downloading the whole mmCEsim app.
 Web app is available at [app.mmcesim.org](https://app.mmcesim.org).
 You may easily host the web app as it is built on docker.
 
+![Web App 0.0.1 Demo on Mac](https://img.mmcesim.org/demo/webapp-0.0.1-mac.png)
+
 {: .note }
 The web app is currently under development.
 
