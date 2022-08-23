@@ -189,6 +189,32 @@ COMMENT Hi, this is a comment!
 
 ***
 
+## CPP
+Write standard C++ contents.
+
+### Explanations
+{: .no_toc }
+
+All contents after the `CPP` keywords are copied to exported codes.
+For backend other than C++, this function is ignored.
+
+<div class="code-example" markdown="1">
+
+C++
+```cpp
+std::cout << "Stantard C++ Language!" << std::endl;
+```
+
+Python/Matlab/Octave
+> (Nothing)
+
+</div>
+```ruby
+CPP std::cout << "Stantard C++ Language!" << std::endl;
+```
+
+***
+
 ## ELSE
 
 ***
@@ -212,7 +238,7 @@ In Matlab/Octave, it is the `end` specification.
 ### Example
 {: .no_toc }
 
-[Example with `FOR`](#for), [Example with `FOREVER`](#forever), [Example with `WHILE`](#while).
+Example with [`FOR`](#for), [`FOREVER`](#forever), [`LOOP`](#loop), [`WHILE`](#while).
 
 ***
 
