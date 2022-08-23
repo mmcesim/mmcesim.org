@@ -43,7 +43,7 @@ But it is actually much more convenient.
 Here are some basic rules:
 - All tokens are separated by space.
 - Function names are in all upper cases, like `CALC`, `WHILE`.
-- Indentation does not matter. Blocks are ended with `END`.
+- Indentation does not matter. Blocks are ended with [`END`](#end).
 - The function line is mainly composed of three parts:
   **return values**, **function name** and **parameters**,
   in the left to right direction.
@@ -200,6 +200,9 @@ Write standard C++ contents.
 All contents after the `CPP` keywords are copied to exported codes.
 For backend other than C++, this function is ignored.
 
+### Example
+{: .no_toc }
+
 <div class="code-example" markdown="1">
 
 C++
@@ -208,7 +211,9 @@ std::cout << "Stantard C++ Language!" << std::endl;
 ```
 
 Python/Matlab/Octave
-> (Nothing)
+```
+                                                      <--- (Nothing)
+```
 
 </div>
 ```ruby
@@ -350,6 +355,7 @@ The initialization target can be specified in two ways:
 | 3 | `dim3` | Size of the third dimension (for vector, matrix and tensor). |
 | 4 | `fill` | Element filling mode. `randn` for standard normal distribution $$\mathcal{N}(0, 1)$$, `randu` for standard uniform distribution $$\mathcal{U}(0, 1)$$, `zeros` for filling as 0, `ones` for filling as 1. Default option is `zeros`. |
 | 5 | `scale` | Scale of the value. This works like multiplying a value after the initialization by `fill`. |
+| 6 | `dtype` | Element data type. This is the one character [prefix](type#prefix) like `c`, `i`. The default value is complex (`c`). |
 
 For initialization of a row vector (`r`), you may just use one dimension.
 For initialization of a scalar (dimension as 0), you can specify the value directly after `=`,
