@@ -41,7 +41,7 @@ and property as a constant.
 
 To specify a variable,
 add `::` between the variable and data type.
-For example, `a::f0` has type 
+For example, `a::f0` has type `f0` (a float scalar).
 
 ## Specifiers
 
@@ -51,7 +51,7 @@ For example, `a::f0` has type
 
 Basic type just names the element type.
 
-| Character | Type | C++ Type | Python Type | Matlab/Octave Type |
+| Prefix | Type | C++ Type | Python Type | Matlab/Octave Type |
 | :-: | :-: | :-: | :-: | :-: |
 | `c` | Complex | [`cx_double`](http://arma.sourceforge.net/docs.html#cx_double) | `complex` | [`complex`](https://www.mathworks.com/help/matlab/ref/complex.html) |
 | `f` | Float | `double` | `double` | [`double`](https://www.mathworks.com/help/matlab/ref/double.html) |
@@ -103,4 +103,4 @@ Dimension for a scalar can not be omitted.
 
 | Suffix | Meaning | C++ | Python | Matlab/Octave |
 | :-: | :-: | :-: | :-: | :-: |
-| `c` | Constant | `const` | (None) | `persistent` |
+| `c` | Constant | [`const`](https://en.cppreference.com/w/cpp/language/cv) | (None) | [`persistent`](https://www.mathworks.com/help/matlab/ref/persistent.html) |
