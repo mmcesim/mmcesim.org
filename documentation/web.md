@@ -15,7 +15,7 @@ Web app is available at [app.mmcesim.org](https://app.mmcesim.org).
 You may easily host the web app as it is built on docker.
 
 {: .note }
-The web app is current under development.
+The web app is currently under development.
 
 ## Pros and Cons
 
@@ -51,4 +51,4 @@ docker pull mmcesim/mmcesim-web
 
 ## License
 Like [mmCEsim](https://github.com/mmcesim/mmcesim), the web app is also
-licensed under the [MIT License]([LICENSE](https://github.com/mmcesim/mmcesim-web/blob/master/LICENSE)).
+licensed under the [MIT License](https://github.com/mmcesim/mmcesim-web/blob/master/LICENSE).
