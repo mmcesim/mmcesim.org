@@ -37,9 +37,11 @@ Well, let's write the above example in LaTeX (tough some informal Matlab style s
 <div class="code-example" markdown="1">
 
 <!-- {% raw %} -->
-```math
-\left\|\mathbf{A}_{1,:,2:5}-\mathbf{B}^{-1}\right\|_2\cdot c\cdot\left(\mathbf{D}\oslash\mathbf{E}^\mathsf{T}+\mathrm{ones}(\sin(\mathbf{f}_2))\right),
-```
+$$
+\begin{equation}
+  \left\|\mathbf{A}_{1,:,2:5}-\mathbf{B}^{-1}\right\|_2\cdot c\cdot\left(\mathbf{D}\oslash\mathbf{E}^\mathsf{T}+\mathrm{ones}(\sin(\mathbf{f}_2))\right),
+\end{equation}
+$$
 <!-- {% endraw %} -->
 where $$\mathbf{A},\mathbf{B},\mathbf{D},\mathbf{E}$$ are matrices, $$c$$ is a scalar, $$\mathbf{f}$$ is a vector, $$\oslash$$ represents the element-wise division,
 and $$\mathrm{ones}$$ represent a matrix with all elements as $$1$$.
