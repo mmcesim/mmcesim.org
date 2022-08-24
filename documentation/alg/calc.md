@@ -37,11 +37,13 @@ Well, let's write the above example in LaTeX (tough some informal Matlab style s
 <div class="code-example" markdown="1">
 
 <!-- {% raw %} -->
+
 $$
 \begin{equation}
   \left\|\mathbf{A}_{1,:,2:5}-\mathbf{B}^{-1}\right\|_2\cdot c\cdot\left(\mathbf{D}\oslash\mathbf{E}^\mathsf{T}+\mathrm{ones}(\sin(\mathbf{f}_2))\right),
 \end{equation}
 $$
+
 <!-- {% endraw %} -->
 where $$\mathbf{A},\mathbf{B},\mathbf{D},\mathbf{E}$$ are matrices, $$c$$ is a scalar, $$\mathbf{f}$$ is a vector, $$\oslash$$ represents the element-wise division,
 and $$\mathrm{ones}$$ represent a matrix with all elements as $$1$$.
@@ -64,6 +66,16 @@ some syntaxes from Python and Matlab are adopted in addition to The LaTeX look.
 ***
 
 ## Syntax Basics
+There are [commands](#commands) starting with backslash (`\`),
+[operators](#operators) and [superscript](#superscripts), [subscripts](#subscripts).
+
+{: .warning-title }
+> Variable Naming
+>
+> - Variable names should not contain reserved characters `` !@#$%^&*()[]{}\|/_+=~,.<>?:;"'` ``.
+> - Variable name should also end with `_`.
+> - Number can not be the first character of variable name.
+> - Variable name should not clash with reserved keywords.
 
 ***
 

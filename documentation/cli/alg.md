@@ -9,3 +9,7 @@ has_children: false
 ---
 
 # Algorithm
+
+Algorithm are defined in ALG language,
+please refer to [documentation of ALG](../alg)
+for details.
