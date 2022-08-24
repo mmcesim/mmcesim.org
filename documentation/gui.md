@@ -8,3 +8,8 @@ has_children: false
 ---
 
 # Graphic User Interface Application
+
+For simpler configuration, a GUI app is developed with Qt.
+
+{: .note }
+GUI app is currently under development.

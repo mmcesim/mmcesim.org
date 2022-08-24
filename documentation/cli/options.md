@@ -16,7 +16,7 @@ mmCEsim 0.1.0    (C) Wuqiong Zhao
 Millimeter Wave Channel Estimation Simulation
 =============================================
 
-Usage: ../mmcesim/bin/mmcesim <command> <input> [options]
+Usage: ./mmcesim <command> <input> [options]
 
 Commands:
   sim [simulate]         run simulation
