@@ -10,6 +10,9 @@ has_children: false
 
 # Macro in ALG Language
 
+Coming soon
+{: .label .label-yellow }
+
 For simulation convenience,
 there are macros defined above the level of ALG language.
 That is, some configuration variables may be used in ALG.

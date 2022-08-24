@@ -2,7 +2,7 @@
 layout: default
 title: Citation
 permalink: /cite
-nav_order: 4
+nav_order: 6
 has_children: false
 ---
 

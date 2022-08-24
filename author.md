@@ -2,7 +2,7 @@
 layout: default
 title: Author
 permalink: /author
-nav_order: 5
+nav_order: 7
 has_children: false
 ---
 
