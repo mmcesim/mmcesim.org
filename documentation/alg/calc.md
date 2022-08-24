@@ -46,6 +46,44 @@ For LaTeX fans, you may even use `^\star` or `^\ast` for conjugate in addition t
 
 ## Operators
 
+| Precedence | Operator | Description | Associativity |
+| :-: | :-: | :-: | :-: |
+| 1 | `()`, `{}` | Function call | Left-to-right |
+| 2 | `^T`, `^H`, `^t`, `^i`, `^*`, `^{-1}` | Matrix superscript | Left-to-right |
+| 3 | `!`, `+`, `-` | Logical NOT | Right-to-left | 
+|^  | `+`, `-`  | a | b |
+
+<table>
+    <thead>
+        <tr>
+            <th>Experiment</th>
+            <th>TestType</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=2>Experiment 1</td>
+            <td>TestType1</td>
+            <td>98</td>
+        </tr>
+        <tr>
+            <td>TestType2</td>
+            <td>73</td>
+        </tr>
+        <tr>
+            <td>Experiment 2</td>
+            <td>TestType1</td>
+            <td>93</td>
+        </tr>
+        <tr>
+            <td>Experiment 3</td>
+            <td>TestType2</td>
+            <td>79</td>
+        </tr>
+    </tbody>
+</table>
+
 ***
 
 ## Commands
