@@ -33,6 +33,24 @@ Well, that looks like $$\rm\LaTeX$$, right?
 The familiar `\` character starting a command (sorry, that's called macro in LaTeX),
 and inverse as `^{-1}`, transpose `^T`, and subscript with `_{}`!
 
+Well, let's write the above example in LaTeX (tough some informal Matlab style subscript)
+<div class="code-example" markdown="1">
+
+<!-- {% raw %} -->
+$$
+\left\|\mathbf{A}_{1,:,2:5}-\mathbf{B}^{-1}\right\|_2\cdot c\cdot\left(\mathbf{D}\oslash\mathbf{E}^\mathsf{T}+\mathrm{ones}(\sin(\mathbf{f}_2))\right),
+$$
+<!-- {% endraw %} -->
+where $$\mathbf{A},\mathbf{B},\mathbf{D},\mathbf{E}$$ are matrices, $$c$$ is a scalar, $$\mathbf{f}$$ is a vector, $$\oslash$$ represents the element-wise division,
+and $$\mathrm{ones}$$ represent a matrix with all elements as $$1$$.
+
+</div>
+<!-- {% raw %} -->
+```tex
+\left\|\mathbf{A}_{1,:,2:5}-\mathbf{B}^{-1}\right\|_2\cdot c\cdot\left(\mathbf{D}\oslash\mathbf{E}^\mathsf{T}+\mathrm{ones}(\sin(\mathbf{f}_2))\right),
+```
+<!-- {% endraw %} -->
+
 {: .tip }
 As a matter of fact, that can be even more like $$\rm\LaTeX$$,
 with all brackets can be converted to `{}`, though parameters are separated by `,` not another `{}`.
