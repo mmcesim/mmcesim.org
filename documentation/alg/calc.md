@@ -29,12 +29,12 @@ Let's have a look at the example below.
 ```tex
 \accu(\abs(A_{1,:,2:5} - B^{-1})) * c @ (D ./ E^T) + \sin(f_{2})
 ```
-Well, that looks like $$\LaTeX$$, right?
+Well, that looks like $$\text{\LaTeX}$$, right?
 The familiar `\` character starting a command (sorry, that's called macro in LaTeX),
 and inverse as `^{-1}`, transpose `^T`, and subscript with `_{}`!
 
 {: tip }
-As a matter of fact, that can be even more like $$\LaTeX$$,
+As a matter of fact, that can be even more like $$\text{\LaTeX}$$,
 with all brackets can be converted to `{}`, though parameters are separated by `,` not another `{}`.
 
 ## Syntax Basics
@@ -43,4 +43,6 @@ with all brackets can be converted to `{}`, though parameters are separated by `
 
 ## Commands
 
-## 
+## Subscripts
+
+## Superscripts
