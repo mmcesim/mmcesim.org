@@ -99,6 +99,15 @@ Dimensions range from 0 to 3.
 {: .warning }
 Dimension for a scalar can not be omitted.
 
+Please note that matrices are stored in **column major** order,
+which is the default order in C++ (Armadillo) and Matlab/Octave.
+In Python (NumPy), it is equivalent to the option `order='F'`.
+
+{: .attention }
+You should always remember the column **major order**,
+especially if you use are accustomed to Python.
+The order will make a big difference to matrix reshape and vectorization.
+
 ### Suffix
 
 | Suffix | Meaning | C++ | Python | Matlab/Octave |
