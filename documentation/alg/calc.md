@@ -36,6 +36,7 @@ and inverse as `^{-1}`, transpose `^T`, and subscript with `_{}`!
 {: tip }
 As a matter of fact, that can be even more like $$\text{\LaTeX}$$,
 with all brackets can be converted to `{}`, though parameters are separated by `,` not another `{}`.
+For LaTeX fans, they may even use `^\star` or `^\ast` for conjugate in addition to the normal `^*`. Happy TeXing :-)
 
 ## Syntax Basics
 

@@ -43,7 +43,7 @@ color_scheme: nil
 compress_html:
   blanklines: true
 mathjax:
-  source: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/latest.min.js?config=TeX-AMS_CHTML
+  source: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML
   config: 'MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } } })'
 
 # External navigation links
