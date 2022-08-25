@@ -456,6 +456,29 @@ END
 ## LOOP
 Loop with iteration counter.
 
+### Descriptions
+{: .no_toc }
+
+The `LOOP` function uses an iteration counter to control the loop.
+The parameters are shown as below.
+
+| Position | Parameter Key | Descriptions |
+| :-: | :-: | :- |
+| 1 | `begin` | The starting iteration counter. | 
+| 2 | `end` | The end iteration counter (not included). | 
+| 3 | `step` | Iteration counter step. |
+| 4 | `from` | The starting iteration counter. |
+| 5 | `to` | The last interaction counter (included if step walks into it). |
+
+{: .tip }
+Normally, we use the `begin` + `end` format.
+You may also use `from`, `to` format,
+but the two formats cannot be used together.
+
+The return value is the iteration counter.
+If it is not specified, the default one is `i`.
+You may also use `::` to specify the iteration counter type.
+
 ### Example
 {: .no_toc }
 
