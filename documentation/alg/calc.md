@@ -90,12 +90,20 @@ There are [commands](#commands) starting with backslash (`\`),
 | `@` | Matrix and matrix multiplication |
 | `.*`, `./` | Element-wise multiplication, division |
 | `!` | Logical NOT |
-| `()`, `{}` | Function call |
+| `()`, `{}` | Command call |
 | `<`, `<=`, `>`, `>=` | Relational operator $$<, \leq, >, \geq$$ |
 | `==`, `!=` | Relational $$=$$ and $$\neq$$ |
 | `&&` | Logical AND |
 | `||` | Logical OR |
 | `=` | Assign |
+
+{: .important }
+> Matrix and matrix multiplication is different from matrix scalar and scalar scalar multiplication.
+> You should distinguish the use of `*` and `@`.
+> (This is like the Python syntax.)
+> 
+> Element-wise multiplication `.*` is different from matrix multiplication `@`.
+> (This is like the Matlab syntax.)
 
 ### Operator Precedence
 The following table lists the precedence and associativity of ALG CALC operators.
@@ -103,7 +111,7 @@ Operators are listed top to bottom, in descending precedence.
 
 | Precedence | Operator | Description | Associativity |
 | :-: | :-: | :-: | :-: |
-| 1 | `()`, `{}` | Function call | Left-to-right |
+| 1 | `()`, `{}` | Command call | Left-to-right |
 | 2 | `^T`, `^H`, `^t`, `^i`, `^*`, `^{-1}` | Matrix superscript | Left-to-right |
 | 3 | `_{}` | Matrix subscript | Left-to-right |
 | 4 | `!`, `+`, `-` | Logical NOT, unary plus/minus | Right-to-left |
@@ -122,6 +130,13 @@ Well, indeed, and it is adapted from [C++ Reference](https://en.cppreference.com
 ***
 
 ## Commands
+
+### Command Usage Basics
+Here are the basic rules for command usage:
+- Commands start with character `\`;
+- Command call has parameter list inside brackets `()`,
+  and you may optionally use `{}` if you want the syntax more like $$\rm\LaTeX$$;
+- Parameters are separated by comma (`,`).
 
 ***
 
