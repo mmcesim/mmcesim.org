@@ -27,7 +27,7 @@ mathjax: true
 
 Let's have a look at the example below.
 ```tex
-\accu(\abs(A_{1,:,2:5} - B^{-1})) * c @ (D ./ E^T) + \sin(f_{2})
+\sqrt(\accu(\pow(\abs(A_{1,:,2:5} - B^{-1}), 2))) * c * A @ (D ./ E^T) + \sin(f_{2})
 ```
 Well, that looks like $$\rm\LaTeX$$, right?
 The familiar `\` character starting a command (sorry, that's called macro in LaTeX),
@@ -40,7 +40,7 @@ Well, let's write the above example in LaTeX (tough some informal Matlab style s
 
 $$
 \begin{equation}
-  \left\|\mathbf{A}_{1,:,2:5}-\mathbf{B}^{-1}\right\|_2\cdot c\cdot\left(\mathbf{D}\oslash\mathbf{E}^\mathsf{T}+\mathrm{ones}(\sin(\mathbf{f}_2))\right),
+  \left\|\mathbf{A}_{1,:,2:5}-\mathbf{B}^{-1}\right\|_2\cdot c\mathbf{A}\cdot\left(\mathbf{D}\oslash\mathbf{E}^\mathsf{T}+\mathrm{ones}(\sin(\mathbf{f}_2))\right),
 \end{equation}
 $$
 
@@ -51,7 +51,7 @@ and $$\mathrm{ones}$$ represent a matrix with all elements as $$1$$.
 </div>
 <!-- {% raw %} -->
 ```tex
-\left\|\mathbf{A}_{1,:,2:5}-\mathbf{B}^{-1}\right\|_2\cdot c\cdot\left(\mathbf{D}\oslash\mathbf{E}^\mathsf{T}+\mathrm{ones}(\sin(\mathbf{f}_2))\right),
+\left\|\mathbf{A}_{1,:,2:5}-\mathbf{B}^{-1}\right\|_2\cdot c\mathbf{A}\cdot\left(\mathbf{D}\oslash\mathbf{E}^\mathsf{T}+\mathrm{ones}(\sin(\mathbf{f}_2))\right)
 ```
 <!-- {% endraw %} -->
 
@@ -82,6 +82,20 @@ There are [commands](#commands) starting with backslash (`\`),
 ## Operators
 
 ### Operator List
+
+| Operators | Description |
+| :-: | :-: |
+| `+`, `-` | (Unary/Binary) plus/minus |
+| `*` | Scalar and scalar multiplication, Scalar and matrix multiplication |
+| `@` | Matrix and matrix multiplication |
+| `.*`, `./` | Element-wise multiplication, division |
+| `!` | Logical NOT |
+| `()`, `{}` | Function call |
+| `<`, `<=`, `>`, `>=` | Relational operator $$<, \leq, >, \geq$$ |
+| `==`, `!=` | Relational $$=$$ and $$\neq$$ |
+| `&&` | Logical AND |
+| `||` | Logical OR |
+| `=` | Assign |
 
 ### Operator Precedence
 The following table lists the precedence and associativity of ALG CALC operators.
