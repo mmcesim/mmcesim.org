@@ -472,7 +472,7 @@ The parameters are shown as below.
 
 {: .tip }
 Normally, we use the `begin` + `end` format.
-You may also use `from`, `to` format,
+You may also use `from` + `to` format,
 but the two formats cannot be used together.
 
 The return value is the iteration counter.
