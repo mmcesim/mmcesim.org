@@ -6,3 +6,13 @@
     src="{{ site.mathjax.source }}">
   </script>
 {% endif %}
+{% if page.schema %}
+  <script type="application/ld+json">
+    {"@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "mmCEsim",
+      "url": "https://mmcesim.org",
+      "logo": "https://www.example.org/images/my-logo.png",
+      "founder": "Wuqiong Zhao"}
+  </script>
+{% endif %}
