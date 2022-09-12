@@ -113,3 +113,9 @@ The order will make a big difference to matrix reshape and vectorization.
 | Suffix | Meaning | C++ | Python | Matlab/Octave |
 | :-: | :-: | :-: | :-: | :-: |
 | `c` | Constant | [`const`](https://en.cppreference.com/w/cpp/language/cv) | (None) | [`persistent`](https://www.mathworks.com/help/matlab/ref/persistent.html) |
+| `r` | Reference | [`reference`](https://en.cppreference.com/w/cpp/language/cv) | (None) | (None) |
+
+{: .note }
+Two suffixes cannot be used together and there is also no need to do so.
+The use of `r` is mainly in [`FUNCTION`](function/#function),
+allowing a parameter to be changed inside the function body.
