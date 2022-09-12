@@ -117,5 +117,5 @@ The order will make a big difference to matrix reshape and vectorization.
 
 {: .note }
 Two suffixes cannot be used together and there is also no need to do so.
-The use of `r` is mainly in [`FUNCTION`](function/#function),
+The use of `r` is mainly in [`FUNCTION`](function#function),
 allowing a parameter to be changed inside the function body.
