@@ -212,7 +212,7 @@ For backend other than C++, this function is ignored.
 
 C++
 ```cpp
-std::cout << "Stantard C++ Language!" << std::endl;
+std::cout << "Standard C++ Language!" << std::endl;
 ```
 
 Python/Matlab/Octave
@@ -222,7 +222,7 @@ Python/Matlab/Octave
 
 </div>
 ```ruby
-CPP std::cout << "Stantard C++ Language!" << std::endl;
+CPP std::cout << "Standard C++ Language!" << std::endl;
 ```
 
 ***
@@ -244,12 +244,12 @@ is defined as
 
 $$
 \begin{equation}\label{eq:dictionary}
-  \frac1{\sqrt{M}}\exp\left(-2\pi i\cdot d\cdot\mathbf{x}_M\mathbf{x}_{M^G}^\mathsf{H}\right),
+  \frac1{\sqrt{M}}\exp\left(-2\pi i\cdot d\cdot\mathbf{x}_M\mathbf{u}_{M^G}^\mathsf{H}\right),
 \end{equation}
 $$
 
 <!-- {% endraw %} -->
-where $$\mathbf{x}_M=[0,1,2,\cdots,M-1]^\mathsf{T}$$, $$\mathbf{x}_{M^G}=[0,1,2,\cdots,M^G-1]^\mathsf{T}$$
+where $$\mathbf{x}_M=[0,1,2,\cdots,M-1]^\mathsf{T}$$, $$\mathbf{u}_{M^G}=[-1,-1+\frac2{M^G},-1+\frac4{M^G},\cdots,1-\frac2{M^G}]^\mathsf{T}$$
 and $$d$$ is the antenna spacing which is assumed to be $$1/2$$ in the current version.
 
 For a uniform planar array (UPA) with size $$M=M_xM_y$$,
