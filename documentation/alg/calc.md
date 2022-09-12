@@ -73,7 +73,7 @@ There are [commands](#commands) starting with backslash (`\`),
 > Variable Naming
 >
 > - Variable names should not contain reserved characters `` !@#$%^&*()[]{}\|/-+=~,.<>?:;"'` ``.
-> - Variable name should also end with `_`.
+> - Variable name should also end with underscore (`_`).
 > - Number can not be the first character of variable name.
 > - Variable name should not clash with reserved keywords.
 

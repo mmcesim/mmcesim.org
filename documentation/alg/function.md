@@ -151,6 +151,11 @@ c = \abs{b_{:, 3}} + \pow(b_{}, 2) # use : in subscript & use {} for function
 
 ***
 
+## CALL
+Call a custom function defined by [`FUNCTION`](#function).
+
+***
+
 ## COMMENT
 Place a line of comment in the exported code.
 
@@ -222,6 +227,76 @@ CPP std::cout << "Stantard C++ Language!" << std::endl;
 
 ***
 
+## DICTIONARY
+Generate a dictionary matrix.
+
+### Explanations
+{: .no_toc }
+
+#### Maths Representation
+{: .no_toc }
+
+The complex dictionary matrix is used in compressed sensing (CS).
+For a uniform linear array (ULA) with size $$M$$ and grid size $$M^G$$,
+the dictionary $$\mathbf{V}\in\mathbb{C}^{M\times M^G}$$
+is defined as
+<!-- {% raw %} -->
+
+$$
+\begin{equation}\label{eq:dictionary}
+  \frac1{\sqrt{M}}\exp\left(-2\pi i\cdot d\cdot\mathbf{x}_M\mathbf{x}_{M^G}^\mathsf{H}\right),
+\end{equation}
+$$
+
+<!-- {% endraw %} -->
+where $$\mathbf{x}_M=[0,1,2,\cdots,M-1]^\mathsf{T}$$, $$\mathbf{x}_{M^G}=[0,1,2,\cdots,M^G-1]^\mathsf{T}$$
+and $$d$$ is the antenna spacing which is assumed to be $$1/2$$ in the current version.
+
+For a uniform planar array (UPA) with size $$M=M_xM_y$$,
+the dictionary is defined as
+<!-- {% raw %} -->
+
+$$
+\begin{equation}
+  \mathbf{V}_M=\mathbf{V}_{M_x}\otimes\mathbf{V}_{M_y},
+\end{equation}
+$$
+
+<!-- {% endraw %} -->
+where $$\otimes$$ denotes the Kronecker product,
+and $$\mathbf{V}_{M_x}$$ and $$\mathbf{V}_{M_y}$$ can both be calculated with $$\eqref{eq:dictionary}$$.
+
+#### ALG Implementation
+{: .no_toc }
+
+The function will call the pre-defined `dictionary` function.
+
+The return value is the generated dictionary matrix which has type `c2c` (const complex matrix).
+
+| Position | Parameter Key | Descriptions |
+| :-: | :-: | :- |
+| 1 | `Mx` | ULA size or UPA $$x$$ dimension size. | 
+| 2 | `My` | $$1$$ for ULA and $$y$$ dimension size for UPA. | 
+| 3 | `GMx` | ULA grid size or UPA $$x$$ dimension grid size. |
+| 4 | `GMy` | $$1$$ for ULA and $$y$$ dimension grid size for UPA. |
+
+### Example
+{: .no_toc }
+
+<div class="code-example" markdown="1">
+
+C++
+```cpp
+const cx_mat D = mmce::dictionary(16, 8, 16, 16);
+```
+
+</div>
+```ruby
+D = DICTIONARY 16 8 16 16 # UPA Antenna size: 16x6, Grid size: 16x16
+```
+
+***
+
 ## ELSE
 Used in [`IF`](#if) block.
 
@@ -270,6 +345,16 @@ In Matlab/Octave, it is the `end` specification.
 
 Example with [`FOR`](#for), [`FOREVER`](#forever), [`IF`](#if),
 [`LOOP`](#loop), [`WHILE`](#while).
+
+***
+
+## Function
+Start a function definition.
+
+### Explanations
+{: .no_toc }
+
+The function requires an [`END`](#end) to mark the end of function.
 
 ***
 
