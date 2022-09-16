@@ -38,10 +38,10 @@ With [CLI Application](https://github.com/mmcesim/mmcesim),
 and [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=mmcesim.mmcesim),
 you can easily find your own way of development and research with mmCEsim.
 
-[![CLI Application](https://img.mmcesim.org/module/CLI.png)](https://github.com/mmcesim/mmcesim)
-[![GUI Application](https://img.mmcesim.org/module/GUI.png)](https://github.com/mmcesim/mmcesim-gui)
-[![Web Application](https://img.mmcesim.org/module/Web.png)](https://app.mmcesim.org)
-[![VS Code Extension](https://img.mmcesim.org/module/VSCode.png)](https://marketplace.visualstudio.com/items?itemName=mmcesim.mmcesim)
+<a href="https://github.com/mmcesim/mmcesim" target="_blank"><img alt="CLI Application" src="https://img.mmcesim.org/module/CLI.png" width="180"></a>
+<a href="https://github.com/mmcesim/mmcesim-gui" target="_blank"><img alt="GUI Application" src="https://img.mmcesim.org/module/GUI.png" width="180"></a>
+<a href="https://app.mmcesim.org" target="_blank"><img alt="Web Application" src="https://img.mmcesim.org/module/Web.png" width="180"></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=mmcesim.mmcesim" target="_blank"><img alt="VS Code Extension" src="https://img.mmcesim.org/module/VSCode.png" width="180"></a>
 
 ## Notice
 This software is still being developed.
