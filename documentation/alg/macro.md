@@ -24,17 +24,17 @@ There are two types of macros:
   and should not have the same name as those in predefined macros.
 
 ## Macro Usage
-Macro starts with the character backtick(`` ` ``),
-for example `` `PILOT ``.
+Macro starts and end with the character backtick(`` ` ``),
+for example `` `PILOT` ``.
 
 ## Predefined Macros
 
 | Macro | Descriptions |
 | :-: | :-: |
-| `` `PILOT `` | Pilot Overhead Number |
-| `` `MEASUREMENT `` | Number of Measurements |
-| `` `SNR_dB `` | Signal-to-Noise Ratio (SNR) in dB |
-| `` `SNR_LINEAR `` | Signal-to-Noise Ratio (SNR) |
+| `` `PILOT` `` | Pilot Overhead Number |
+| `` `MEASUREMENT` `` | Number of Measurements |
+| `` `SNR_dB` `` | Signal-to-Noise Ratio (SNR) in dB |
+| `` `SNR_LINEAR` `` | Signal-to-Noise Ratio (SNR) |
 
 {: .note }
 It is advised not to use macros when you can get the value elsewhere
