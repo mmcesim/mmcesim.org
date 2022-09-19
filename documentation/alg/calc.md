@@ -77,6 +77,8 @@ There are [commands](#commands) starting with backslash (`\`),
 > - Number can not be the first character of variable name.
 > - Variable name should not clash with reserved keywords.
 
+Note that **whitespace does not matter** and are actually removed before parsing.
+
 ***
 
 ## Operators
@@ -210,6 +212,54 @@ section of `.sim` configuration.
 ***
 
 ## Subscripts
+Subscripts take the subview of vector/matrix/tensor.
+The syntax is `_{<sub>}` (a leading underscore `_` as in LaTeX),
+where the brackets cannot be omitted
+even if `sub` contains only one character.
+
+{: .warning }
+> The subscript syntax imposes a requirement for variables:
+> variables cannot be ended with character underscore (`_`).
+>
+> Due to internal underscore is allowed for variable names,
+> the subscript is only recognized when brackets `{}` exists.
+
+### Foo Subscripts
+Well, some subscripts just do nothing, so they are removed.
+They are `_{}`, `_{:}`, `_{:,:}`, `_{:,:,:}`.
+
+### Valid Subscripts
+The contents inside `_{}` of valid subscripts are similar
+to MATLAB syntax except for indices start from 0.
+I do not want to elaborate the rule here
+but only give several examples,
+and you can find the pattern easily.
+
+```py
+# x is a vector (dim = 1)
+# A is a matrix (dim = 2)
+# Z is a tensor (dim = 3)
+x_{2} # [scalar] the 2-nd element of vector
+x_{1:4} # [vector] elements 1,2,3,4 of vectors
+x_{index} # [scalar] (index of type u0) the index-element of vector
+x_{indices} # [vector] (indices of type u1) elements of indices in vector
+A_{3,2} # [scalar] the element at position (3,2)
+A_{2,index} # [scalar] (index of type u0)
+A_{2,:} # [rowvec] the 2-nd row
+A_{:,3} # [vector] the 3-nd column
+A_{1,3:5} # [vector] elements (1,3),(1,4),(1,5)
+A_{2:4,indices} # [matrix] (indices of type u1)
+A_{15} # [scalar] the 15-th element in the flattened matrix as vector
+A^T_{1,2} # [scalar] element (1,2) of A^T, i.e. element (2,1) of A
+A_{1:3,:}^H # [scalar] the conjugate transpose of sub matrix (Mind the sequence!)
+Z_{0,0,0} # [scalar] element (0,0,0) of tensor
+Z_{:,:,2} # [matrix] the 2-nd slice of tensor
+Z_{:,:,indices} # [tensor] (indices of type u1) slices of tensor
+```
+
+{: .warning }
+Using indices vector of type `u1` for a tensor is only supported
+for the last dimension (i.e. the slice).
 
 ***
 
