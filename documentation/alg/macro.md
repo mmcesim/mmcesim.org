@@ -49,6 +49,8 @@ for example `` `PILOT` ``.
 | `` `BEAM.T.y` `` | Transmitter Beam in $$y$$ Dimension | 12345 |
 | `` `BEAM.T` `` | Transmitter Beam (Antenna Number) | 12345 |
 | `` `BEAM.*` `` | Multiplication of Tx and Rx Beam  | 12345 |
+| [`` `DICTIONARY.R` ``](#dictionaryr) | Receiver Dictionary Matrix | 12345 |
+| [`` `DICTIONARY.T` ``](#dictionaryt) | Transmitter Dictionary Matrix | 12345 |
 | `` `GRID.R.x` `` | Receiver Grid in $$x$$ Dimension | 12345 |
 | `` `GRID.R.y` `` | Receiver Grid in $$y$$ Dimension | 12345 |
 | `` `GRID.R` `` | Receiver Grid (Antenna Number) | 12345 |
@@ -59,7 +61,7 @@ for example `` `PILOT` ``.
 | `` `JOB_NUM` `` | Number of Estimation Jobs | 1234 |
 | `` `JOB_CNT` `` | The Current Job Count (From 0) | 123 |
 | `` `MEASUREMENT` `` | Number of Measurements | 12 |
-| `` `NMSE` `` | NMSE Result Matrix | 123 |
+| [`` `NMSE` ``](#nmse) | NMSE Result Matrix | 123 |
 | `` `PILOT` `` | Pilot Overhead Number | 12 |
 | `` `SIZE.R.x` `` | Receiver Size in $$x$$ Dimension | 12345 |
 | `` `SIZE.R.y` `` | Receiver Size in $$y$$ Dimension | 12345 |
@@ -87,6 +89,16 @@ In the table above, the scope of macro means where the macro can be used safely.
 | 4. Appendix | `appendix` part of configuration |
 | 5. Preamble | `preamble` part of configuration |
 | 6. Others | Any other part where ALG language is used. |
+
+### `` `DICTIONARY.R` ``
+Receiver dictionary matrix.
+Return a `c2c` (const complex matrix).
+This macro actually expands to CALC function [`\dictionary`](calc#dictionary).
+
+### `` `DICTIONARY.T` ``
+Transmitter dictionary matrix.
+Return a `c2c` (const complex matrix).
+This macro actually expands to CALC function [`\dictionary`](calc#dictionary).
 
 ### `` `NMSE` ``
 Normalized mean square error result is stored as a matrix
