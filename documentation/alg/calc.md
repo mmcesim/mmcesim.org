@@ -264,3 +264,36 @@ for the last dimension (i.e. the slice).
 ***
 
 ## Superscripts
+
+Supper scripts are led by caret (`^`) as in LaTeX.
+
+### Transpose and Conjugate Transpose
+
+#### Real Matrices
+{: .no_toc }
+
+The transpose for a real matrix is `^t` or `^{t}`.
+
+#### Complex Matrices
+{: .no_toc }
+
+The transpose for a complex matrix is `^T` or `^{T}`,
+and the conjugate transpose for a complex matrix is `^H` or `^{H}`.
+
+{: .warning }
+> There can be compiling error if `^T` and `^t` are misused!
+
+### Conjugate
+
+The conjugate of a complex number/vector/matrix/tensor is
+`^*`, `^{*}`, `^\star`, `^{\star}`, `^\ast` or `^{\ast}`.
+(Wow, so LaTeX!!!)
+
+{: .warning }
+> You should not calculate the conjugate for a real number/vector/matrix/tensor.
+
+### Inverse
+
+The inverse of a square matrix is `^{-1}`, `^i` or `^I`.
+
+For a non-square matrix, you may use `\pinv` (pseudo-inverse) function.
