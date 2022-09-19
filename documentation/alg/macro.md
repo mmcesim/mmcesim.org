@@ -6,12 +6,20 @@ parent: ALG Language
 grand_parent: Documentation
 nav_order: 4
 has_children: false
+mathjax: true
 ---
 
 # Macro in ALG Language
+{: .no_toc }
 
-Coming soon
-{: .label .label-yellow }
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 For simulation convenience,
 there are macros defined above the level of ALG language.
@@ -73,15 +81,18 @@ In the table above, the scope of macro means where the macro can be used safely.
 
 | Scope | Description |
 | :-: | :-: |
-| 1. Algorithm | Between `BRANCH` and `MERGE` in `estimation` |
+| 1. Algorithm | Between [`BRANCH`](function#branch) and [`MERGE`](function#merge) in `estimation` |
 | 2. Estimation | Other part of `estimation` |
 | 3. Conclusion | `conclusion` part of configuration |
 | 4. Appendix | `appendix` part of configuration |
 | 5. Preamble | `preamble` part of configuration |
 | 6. Others | Any other part where ALG language is used. |
 
-### Additional Information
+### `` `NMSE` ``
+Normalized mean square error result is stored as a matrix
+with dimension of {Test Number of SNR/Pilot} $$\times$$ {Algorithm Number}.
 
+### Additional Information
 
 {: .note-title }
 > Source

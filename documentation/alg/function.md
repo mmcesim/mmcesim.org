@@ -82,6 +82,10 @@ Please refer to the specific documentation for each function.
 
 ***
 
+## BRANCH
+
+***
+
 ## BREAK
 Break from a block (for [`FOR`](#for), [`FOREVER`](#forever), [`LOOP`](#loop), [`WHILE`](#while)).
 
@@ -535,6 +539,10 @@ END
 
 ## PRINT
 Print the contents.
+
+***
+
+## MERGE
 
 ***
 
