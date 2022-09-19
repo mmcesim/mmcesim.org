@@ -24,6 +24,34 @@ Configuration file is in YAML format.
 For more information about why YAML,
 please refer to [this blog](https://blog.mmcesim.org/2022/07/file-format-yaml/).
 
+## Version
+This field (`version`) takes a string value representing the targeted mmCEsim version.
+For compatibility convenience, this string can be used by the compiler
+to decide the behaviour.
+The current default value is the same as the compiler version (`0.1.0`).
+
+## Meta
+The `meta` is a map that provides metadata which can be used in report.
+The used fields now include: `title`, `description`, `author`.
+
+## Physics
+The `physics` map contains physical system settings.
+
+### Frequency
+The bandwidth is specified in `frequency` filed.
+Currently, this field does not do anything,
+which is always assumed to be `narrow` (narrow band) now.
+
+### Off Grid
+This is actually about the model.
+With the geometric channel model with grid,
+there can be off-grid (or power leakage) problems.
+Recently, there are also super resolution formulations to solve the problem.
+But we still adopt the grid representation for its popularity and simplicity.
+By setting `off_grid` field inside `physics` to `false`,
+you may not consider the off grid effect.
+The default value is `true`.
+
 ## Simulation
 
 ### Report

@@ -41,3 +41,12 @@ Configuration:
 
 {: .note }
 The Application is currently under active development.
+
+## exp
+Command `exp` exports the `.sim` configuration and corresponding
+`.alg` algorithms to a selected language.
+Currently, only export to C++ with Armadillo is supported.
+
+## sim
+Command `sim` simulates the exported code with the selected backend.
+Currently, only C++ with Armadillo is supported.
