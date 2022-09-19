@@ -278,6 +278,12 @@ Example with [`FOR`](#for), [`FOREVER`](#forever), [`IF`](#if),
 
 ***
 
+## ESTIMATE
+[CALL](#call) [standard ALG functions](library) to estimate the sparse channel
+with compressed sensing (CS).
+
+***
+
 ## Function
 Start a function definition.
 

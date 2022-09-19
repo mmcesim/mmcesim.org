@@ -177,8 +177,6 @@ and $$\mathbf{V}_{M_x}$$ and $$\mathbf{V}_{M_y}$$ can both be calculated with $$
 #### ALG Implementation
 {: .no_toc }
 
-The function will call the pre-defined `dictionary` function.
-
 The return value is the generated dictionary matrix which has type `c2c` (const complex matrix).
 
 | Position | Meaning | Descriptions |
@@ -191,16 +189,13 @@ The return value is the generated dictionary matrix which has type `c2c` (const 
 #### Example
 {: .no_toc }
 
-<div class="code-example" markdown="1">
-
-C++
-```cpp
-const cx_mat D = mmce::dictionary(16, 8, 16, 16);
-```
-
-</div>
 ```ruby
-D = DICTIONARY 16 8 16 16 # UPA Antenna size: 16x6, Grid size: 16x16
+# UPA Antenna size: 16x6, Grid size: 16x16
+D = \dictionary(16, 8, 16, 16)
+# This creates a new instance of dictionary matrix
+D::mc = NEW \dictionary(16, 8, 16, 16)
+# Use macro to create a dictionary at the transmitter side
+D::mc = NEW `DICTIONARY.T`
 ```
 
 {: .tip }
