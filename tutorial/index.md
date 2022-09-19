@@ -10,3 +10,6 @@ has_children: true
 
 {: .note }
 The tutorial is being worked on.
+
+A brief introduction to mmCEsim is presented in 2022 National Postdoc Seminar in Nanjing.
+You may check out the [poster](https://pub.mmcesim.org/mmCEsim_Nanjing2022_Poster.pdf) for more information.

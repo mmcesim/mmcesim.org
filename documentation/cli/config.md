@@ -32,3 +32,14 @@ please refer to [this blog](https://blog.mmcesim.org/2022/07/file-format-yaml/).
 
 The simulation report can be exported as plain text report, for example
 <script src="https://gist.github.com/Teddy-van-Jerry/0e181131baf2d60047b7ce6d24ee6422.js"></script>
+
+#### LaTeX and PDF Report
+
+LaTeX and its generated PDF report is also supported in addition to the
+plain text `.rpt` report.
+
+{: .hint-title }
+> Example
+> 
+> [PDF Report Example](https://pub.mmcesim.org/mmCEsim_Example_Report.pdf)
+> with [configuration example](https://pub.mmcesim.org/mmCEsim_Example_Config.pdf).
