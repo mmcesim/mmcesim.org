@@ -20,6 +20,8 @@ has_children: false
 {:toc}
 </details>
 
+***
+
 Configuration file is in YAML format.
 For more information about why YAML,
 please refer to [this blog](https://blog.mmcesim.org/2022/07/file-format-yaml/).
@@ -57,6 +59,8 @@ But we still adopt the grid representation for its popularity and simplicity.
 By setting `off_grid` field inside `physics` to `false`,
 you may not consider the off grid effect.
 The default value is `true`.
+
+***
 
 ## Nodes
 The `nodes` is a sequence (array) of nodes in the channel network.
@@ -117,6 +121,30 @@ Currently, the `scheme` only supports `random`.
 ***
 
 ## Channels
+The configuration `channels` is a sequence (array) of channel links.
+The settings for each channel link is shown below.
+
+### ID
+Similar to [ID](#id) in [Nodes](#nodes),
+each channel link has a unique identifier as in field `id`.
+
+### From
+The node which the link channel is transmitter from.
+(`from`)
+
+### To
+The node which the link channel transmits to.
+(`to`)
+
+### Sparsity
+The `sparsity` (number of clusters) of the channel.
+
+### Gains
+The channel `gains` consisting of pass loss.
+There are two types of gains supported (`mode`):
+`normal` and `uniform`.
+For `normal` gains, `mean` and `variance` need to be specified.
+For `uniform` gains, `min` and `max` need to be set.
 
 ***
 
