@@ -542,6 +542,11 @@ Print the contents.
 
 ***
 
+## RECOVER
+Declare the recovered channel.
+
+***
+
 ## MERGE
 
 ***

@@ -148,7 +148,66 @@ For `uniform` gains, `min` and `max` need to be set.
 
 ***
 
+## Sounding
+Information related to the sounding procedure is defined here.
+
+### Variables
+Channel `variables` names are defined here.
+- `received`: received signal vector
+- `noise`: received noise vector
+- `channel`: the cascaded channel
+
+***
+
+## Preamble
+The `preamble` is code part before main simulation
+(including sounding, estimation and report generation).
+
+{: .tip }
+Custom functions can be defined here.
+
+This part is specified using the [ALG language](../alg).
+
+***
+
+## Estimation
+The main code for `estimation`.
+Function [`ESTIMATE`](../alg/function#estimate) is used here
+to call the compressed sensing (CS) algorithms
+either defined in the [standard ALG library](../alg/library)
+or in the [preamble](#preamble).
+
+{: .important-title }
+> Basic MIMO Example
+> 
+> For a basic MIMO example,
+> the estimation part is about converting the mmWave channel estimation
+> to a compressed sensing problem before using [`ESTIMATE`](../alg/function#estimate),
+> and recover the channel from the sparse result with [`RECOVER`](../alg/function#recover).
+
+This part is specified using the [ALG language](../alg).
+
+***
+
+## Conclusion
+In `conclusion`,
+additional code after each [simulation job](#jobs)
+is added here.
+
+This part is specified using the [ALG language](../alg).
+
+***
+
+## Appendix
+The code in `appendix` is added after all jobs are done.
+
+This part is specified using the [ALG language](../alg).
+
+***
+
 ## Simulation
+
+### Jobs
 
 ### Report
 
