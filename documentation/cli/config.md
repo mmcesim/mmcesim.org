@@ -207,6 +207,12 @@ This part is specified using the [ALG language](../alg).
 
 ## Simulation
 
+### Backend
+The `backend` includes `cpp` (C++ with Armadillo library),
+`python` (Python with NumPy library)
+and `matlab` or `octave`.
+This sets the language it exports to and the backend simulation bases on.
+
 ### Jobs
 
 ### Report
