@@ -83,3 +83,7 @@ callouts:
   attention:
     title: Attention
     color: purple
+
+exclude:
+  - README.md
+  - example/README.md
