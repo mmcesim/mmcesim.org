@@ -1,0 +1,3 @@
+[submodule "examples"]
+	path = example
+	url = https://github.com/mmcesim/examples.git
