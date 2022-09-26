@@ -30,6 +30,8 @@ There are two types of macros:
   directly without declaring;
 - **user defined macros**: They are placed in the `macros:` list,
   and should not have the same name as those in predefined macros.
+  They may appear in the top level of `.sim` file,
+  or under each job algorithm.
 
 ## Macro Usage
 Macro is wrapped within the character backtick(`` ` ``),
@@ -49,6 +51,7 @@ for example `` `PILOT` ``.
 | `` `BEAM.T.y` `` | Transmitter Beam in $$y$$ Dimension | 12345 |
 | `` `BEAM.T` `` | Transmitter Beam (Antenna Number) | 12345 |
 | `` `BEAM.*` `` | Multiplication of Tx and Rx Beam  | 12345 |
+| `` `CARRIERS_NUM` `` | Number of OFDM Carriers | 1234 |
 | [`` `DICTIONARY.R` ``](#dictionaryr) | Receiver Dictionary Matrix | 12345 |
 | [`` `DICTIONARY.T` ``](#dictionaryt) | Transmitter Dictionary Matrix | 12345 |
 | `` `GRID.R.x` `` | Receiver Grid in $$x$$ Dimension | 12345 |
@@ -114,3 +117,34 @@ with dimension of {Test Number of SNR/Pilot} $$\times$$ {Algorithm Number}.
 {: .tip }
 It is advised not to use macros when you can get the value elsewhere easily
 for example from the size of a matrix.
+
+## User Defined Macros
+### Top-Level Macros
+Top-level macros defined in the top-level [`macro`](../cli/config#macro) field.
+They are specified as a sequence (array).
+For each macro, you need to define
+- `name`: The name for the macro without the wrapping `` ` ``;
+- `value`: The value for the macro;
+- `in_alg`: (Optional) Whether the macro is used in job algorithms. Default as `false`.
+
+{: .tip-title }
+> Example
+> 
+> You may define the macro `` `SPARSITY_EST` `` of value `6`
+> which is used inside job algorithms with the following code:
+> ```yml
+> macro:
+>   - name: SPARSITY_EST
+>     value: 6
+>     in_alg: true
+> ```
+
+If `in_alg` is set to `true`,
+the macro can only be used in scope 1 and 2.
+But this allows the macro able to be overwritten by [algorithm macros](#algorithm-macros).
+
+### Algorithm Macros
+Algorithm macros are defined similar to [top-level macros](#top-level-macros),
+except for algorithm macros are defined inside the job algorithm,
+on the same level as `alg` and `label`.
+This will overwrite top-level macros which has `in_alg` as `true`.

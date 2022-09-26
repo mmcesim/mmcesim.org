@@ -60,6 +60,12 @@ By setting `off_grid` field inside `physics` to `false`,
 you may not consider the off grid effect.
 The default value is `true`.
 
+### Carriers
+For a wideband system,
+you may specify the number of carriers used in OFDM.
+Its corresponding [macro](../alg/macro)s in [CALC](../alg/calc) is
+`` `CARRIERS_NUM` ``.
+
 ***
 
 ## Nodes
@@ -117,6 +123,12 @@ Its corresponding [macro](../alg/macro)s in [CALC](../alg/calc) are
 In the `beamforming` field, the variable name `variable` is set,
 and the beamforming scheme `scheme` is defined.
 Currently, the `scheme` only supports `random`.
+
+***
+
+## Macro
+User-defined macros are defined here.
+Please refer to [documentation of macro](../alg/macro#user-defined-macros) for more information.
 
 ***
 
