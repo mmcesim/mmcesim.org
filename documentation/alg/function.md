@@ -83,6 +83,12 @@ Please refer to the specific documentation for each function.
 ***
 
 ## BRANCH
+Declare start of the scope of job algorithms.
+
+### Explanations
+{: .no_toc }
+
+This is useful in [`estimation`](../cli/config#estimation).
 
 ***
 
