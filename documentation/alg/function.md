@@ -89,6 +89,16 @@ Declare start of the scope of job algorithms.
 {: .no_toc }
 
 This is useful in [`estimation`](../cli/config#estimation).
+Contents between `BRANCH` and [`MERGE`](#merge)
+will be repeated for different algorithms.
+So you need to place compressed sensing estimation
+[`ESTIMATE`](#estimate) and [`RECOVER`](#recover)
+inside.
+
+### Example
+{: .no_toc }
+
+[Example of OFDM OMP](https://github.com/mmcesim/examples/blob/6500ae3021e06b583897f9554e694e86584064f0/MIMO_OFDM_OMP/MIMO_wideband.sim#L90).
 
 ***
 
@@ -132,6 +142,9 @@ so string operations should be avoided.
 {: .warning }
 For safety, you should not use anything other than ANSI characters in `CALC` functions.
 Otherwise, there can be undefined behaviour.
+
+If you want the calculation result to be a new variable,
+you may use function [`NEW`](#new).
 
 ### Example
 {: .no_toc }
@@ -294,7 +307,7 @@ with compressed sensing (CS).
 
 ***
 
-## Function
+## FUNCTION
 Start a function definition.
 
 ### Explanations
@@ -546,14 +559,93 @@ END
 ## PRINT
 Print the contents.
 
+### Explanations
+{: .no_toc }
+
+The function takes a list of parameters,
+and they can be matrices or scalar values.
+They are printed out from left to right.
+
+### Examples
+{: .no_toc }
+
+<div class="code-example" markdown="1">
+
+C++
+```cpp
+std::cout << 1 << '\t' << H << '\n';
+```
+
+</div>
+```ruby
+PRINT 1 '\t' H '\n'
+```
+
 ***
 
 ## RECOVER
 Declare the recovered channel.
 
+### Explanations
+{: .no_toc }
+
+The NMSE/BER performance is evaluated with the recovered channel specified here
+(the only parameter that needs to be set).
+
+### Examples
+{: .no_toc }
+
+[Example of MIMO OFDM](https://github.com/mmcesim/examples/blob/6500ae3021e06b583897f9554e694e86584064f0/MIMO_OFDM_OMP/MIMO_wideband.sim#L110), where `H_hat` is the recovered channel.
+
 ***
 
 ## MERGE
+Declare end the scope of job algorithms.
+
+### Explanations
+{: .no_toc }
+
+This works with [`BRANCH`](#branch).
+View documentation of `BRANCH` for details.
+
+If you do not specify `MERGE`,
+it is assumed to be end of [`estimation`](../cli/config#estimation) by default.
+
+{: .tip }
+It is advised to always specify `MERGE` so that the range
+between [`BRANCH`](#branch) and `MERGE` is clearer
+and can be extended by other users more easily.
+
+### Examples
+{: .no_toc }
+
+[Example of OFDM OMP](https://github.com/mmcesim/examples/blob/6500ae3021e06b583897f9554e694e86584064f0/MIMO_OFDM_OMP/MIMO_wideband.sim#L111).
+
+***
+
+## NEW
+Create a new variable from [CALC](#calc) result.
+
+### Explanations
+{: .no_toc }
+
+The parameters are the same as [CALC](#calc),
+except for the return value type is **required**.
+
+### Examples
+{: .no_toc }
+
+<div class="code-example" markdown="1">
+
+C++
+```cpp
+cx_vec y = H * x + n;
+```
+
+</div>
+```ruby
+y::v = NEW H @ x + n
+```
 
 ***
 
