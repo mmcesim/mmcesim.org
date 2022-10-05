@@ -69,6 +69,6 @@ Least square (LS) with specified support.
 {: .note-title }
 > Source
 >
-> Defined in [`/include/mmcesim/LS_Support.alg`](https://github.com/mmcesim/mmcesim/blob/master/include/mmcesim/LS_Support.alg).
+> Defined in [`/include/mmcesim/LS_support.alg`](https://github.com/mmcesim/mmcesim/blob/master/include/mmcesim/LS_support.alg).
 
 ## Other Utilities
