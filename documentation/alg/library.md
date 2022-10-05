@@ -21,6 +21,8 @@ mathjax: true
 {:toc}
 </details>
 
+***
+
 ## Basics
 
 ALG Library is a collection of standard ALG functions
@@ -35,7 +37,7 @@ For example, `OMP` function is defined in file `/include/mmcesim/OMP.alg`.
 
 ***
 
-## Compressed Sensing Algorithms
+## Algorithms
 
 ### OMP
 Orthogonal matching pursuit.
@@ -45,6 +47,14 @@ Orthogonal matching pursuit.
 >
 > Defined in [`/include/mmcesim/OMP.alg`](https://github.com/mmcesim/mmcesim/blob/master/include/mmcesim/OMP.alg).
 
+### LS
+Least square (LS).
+
+{: .note-title }
+> Source
+>
+> Defined in [`/include/mmcesim/LS.alg`](https://github.com/mmcesim/mmcesim/blob/master/include/mmcesim/LS.alg).
+
 ### Oracle LS
 Oracle least square (LS).
 
@@ -52,3 +62,13 @@ Oracle least square (LS).
 > Source
 >
 > Defined in [`/include/mmcesim/Oracle_LS.alg`](https://github.com/mmcesim/mmcesim/blob/master/include/mmcesim/Oracle_LS.alg).
+
+### LS Support
+Least square (LS) with specified support.
+
+{: .note-title }
+> Source
+>
+> Defined in [`/include/mmcesim/LS_Support.alg`](https://github.com/mmcesim/mmcesim/blob/master/include/mmcesim/LS_Support.alg).
+
+## Other Utilities

@@ -132,7 +132,7 @@ There are two kinds of `CALC` usage: **inline** and **standalone**.
   if nothing is specified.
   Therefore, `result = CALC your expression` is equivalent to `result = your expression`.
 
-For more information about the `CALC` usage,
+For more information about the `CALC` syntax,
 please refer to [CALC details](calc).
 
 {: .note }
