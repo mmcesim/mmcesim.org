@@ -140,7 +140,7 @@ Here are the basic rules for command usage:
   and you may optionally use `{}` if you want the syntax more like $$\rm\LaTeX$$;
 - Parameters are separated by comma (`,`).
 
-The function naming convention mainly follows that of [Armadillo](http://arma.sourceforge.net/docs.html) which is also similar to MATLAB.
+The function naming convention mainly follows that of [Armadillo](https://arma.sourceforge.net/docs.html) which is also similar to MATLAB.
 
 ### \dictionary
 Generate a dictionary matrix.

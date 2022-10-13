@@ -53,10 +53,10 @@ Basic type just names the element type.
 
 | Prefix | Type | C++ Type | Python Type | Matlab/Octave Type |
 | :-: | :-: | :-: | :-: | :-: |
-| `c` | Complex | [`cx_double`](http://arma.sourceforge.net/docs.html#cx_double) | `complex` | [`complex`](https://www.mathworks.com/help/matlab/ref/complex.html) |
+| `c` | Complex | [`cx_double`](https://arma.sourceforge.net/docs.html#cx_double) | `complex` | [`complex`](https://www.mathworks.com/help/matlab/ref/complex.html) |
 | `f` | Float | `double` | `double` | [`double`](https://www.mathworks.com/help/matlab/ref/double.html) |
 | `i` | Integer | `int` | `int` | [`int64`](https://www.mathworks.com/help/matlab/ref/int64.html) |
-| `u` | Unsigned Integer | [`uword`](http://arma.sourceforge.net/docs.html#uword) | `uint` | [`uint64`](https://www.mathworks.com/help/matlab/ref/uint64.html) |
+| `u` | Unsigned Integer | [`uword`](https://arma.sourceforge.net/docs.html#uword) | `uint` | [`uint64`](https://www.mathworks.com/help/matlab/ref/uint64.html) |
 | `b` | Boolean | `bool` | `bool` | [`logical`](https://www.mathworks.com/help/matlab/ref/logical.html) |
 | `s` | String | [`std::string`](https://en.cppreference.com/w/cpp/string/basic_string) | `str` | [`string`](https://www.mathworks.com/help/matlab/ref/string.html) |
 | `h` | Character | `char` | `char` | [`char`](https://www.mathworks.com/help/matlab/ref/char.html) |
@@ -92,9 +92,9 @@ Dimensions range from 0 to 3.
 | Dimension | Type | C++ Type |
 | :-: | :-: | :-: |
 | 0 | Scalar | -- |
-| 1 | Vector | [`Col`](http://arma.sourceforge.net/docs.html#Col) |
-| 2 | Matrix | [`Mat`](http://arma.sourceforge.net/docs.html#Mat) |
-| 3 | Tensor | [`Cube`](http://arma.sourceforge.net/docs.html#Cube) |
+| 1 | Vector | [`Col`](https://arma.sourceforge.net/docs.html#Col) |
+| 2 | Matrix | [`Mat`](https://arma.sourceforge.net/docs.html#Mat) |
+| 3 | Tensor | [`Cube`](https://arma.sourceforge.net/docs.html#Cube) |
 
 {: .warning }
 Dimension for a scalar can not be omitted.
