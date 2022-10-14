@@ -52,3 +52,11 @@ Currently, only export to C++ with Armadillo is supported.
 ## sim
 Command `sim` simulates the exported code with the selected backend.
 Currently, only C++ with Armadillo is supported.
+
+So far, only C++ compiler `g++` (default) and `clang++` are supported
+which can be configured with option [`config`](#config).
+You may also need to configure additional C++ flags with `config cppflags`
+if by default the compiler cannot find [`armadillo`](https://arma.sourceforge.net) library.
+
+## config
+Configure settings.
