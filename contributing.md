@@ -33,6 +33,23 @@ On a Unix (Linux and macOS) system, you may use `chmod +x ./misc/format`.
 ### CLI Application
 [![mmcesim/mmcesim - GitHub](https://gh-card.dev/repos/mmcesim/mmcesim.svg)](https://github.com/mmcesim/mmcesim)
 
+The project is configured with CMake, and the role of each folder is listed below.
+- `include`: C++ Header Files (`.h`)
+  - `export`: Header Files Concerning ALG Export
+  - `mmcesim`: Files Needed by mmCEsim Binary
+    - `copy`: Contents Directly Copied to Form Generated C++/Python/Matlab Code
+    - `tex`: $\rm\LaTeX$ Files for Report Generation
+- `src`: C++ Source Files (`.cpp`)
+  - `export`: Class Implementations Corresponding to Those in `include/export`
+- `ext`: 3rd Party Resources
+  - `astyle`: Format Generated C++ Code
+  - `fmt`: C++ String Format (like That in C++20)
+  - `yaml-cpp`: Parse YAML Configuration (`.sim`)
+- `test`: Test Files Including `CTest` Configuration
+- `doc`: Documentation (*Currently Empty*)
+- `bin`: Generated Binary Executable
+- `misc`: Miscellaneous Files
+
 ### GUI Application
 [![mmcesim/mmcesim-gui - GitHub](https://gh-card.dev/repos/mmcesim/mmcesim-gui.svg)](https://github.com/mmcesim/mmcesim-gui)
 
