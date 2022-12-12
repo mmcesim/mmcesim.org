@@ -38,7 +38,7 @@ The project is configured with CMake, and the role of each folder is listed belo
   - `export`: Header Files Concerning ALG Export
   - `mmcesim`: Files Needed by mmCEsim Binary
     - `copy`: Contents Directly Copied to Form Generated C++/Python/Matlab Code
-    - `tex`: $\rm\LaTeX$ Files for Report Generation
+    - `tex`: LaTeX Files for Report Generation
 - `src`: C++ Source Files (`.cpp`)
   - `export`: Class Implementations Corresponding to Those in `include/export`
 - `ext`: 3rd Party Resources
@@ -49,6 +49,9 @@ The project is configured with CMake, and the role of each folder is listed belo
 - `doc`: Documentation (*Currently Empty*)
 - `bin`: Generated Binary Executable
 - `misc`: Miscellaneous Files
+
+{: .tip }
+For more information, please refer to the project [CONTRIBUTING](https://github.com/mmcesim/mmcesim/tree/master/CONTRIBUTING.md) and [Wiki](https://github.com/mmcesim/mmcesim/wiki).
 
 ### GUI Application
 [![mmcesim/mmcesim-gui - GitHub](https://gh-card.dev/repos/mmcesim/mmcesim-gui.svg)](https://github.com/mmcesim/mmcesim-gui)
