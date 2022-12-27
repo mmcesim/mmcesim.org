@@ -57,6 +57,8 @@ nav_external_links:
     url: https://blog.mmcesim.org
   - title: mmCEsim Publications
     url: https://pub.mmcesim.org
+  - title: mmCEsim Dev Doc
+    url: https://dev.mmcesim.org
 
 callouts:
   warning:

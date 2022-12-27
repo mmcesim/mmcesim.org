@@ -43,7 +43,7 @@ The project is configured with CMake, and the role of each folder is listed belo
   - `export`: Class Implementations Corresponding to Those in `include/export`
 - `ext`: 3rd Party Resources
   - `astyle`: Format Generated C++ Code
-  - `fmt`: C++ String Format (like That in C++20)
+  - `fmt`: C++ String Format (Like That in C++20)
   - `yaml-cpp`: Parse YAML Configuration (`.sim`)
 - `test`: Test Files Including `CTest` Configuration
 - `doc`: Documentation (*Currently Empty*)
@@ -51,7 +51,7 @@ The project is configured with CMake, and the role of each folder is listed belo
 - `misc`: Miscellaneous Files
 
 {: .tip }
-For more information, please refer to the project [CONTRIBUTING](https://github.com/mmcesim/mmcesim/tree/master/CONTRIBUTING.md) and [Wiki](https://github.com/mmcesim/mmcesim/wiki).
+For more information, please refer to the project [CONTRIBUTING](https://github.com/mmcesim/mmcesim/tree/master/CONTRIBUTING.md) and [Wiki](https://github.com/mmcesim/mmcesim/wiki). The [Doxygen documentation](https://dev.mmcesim.org) for C++ is also available.
 
 ### GUI Application
 [![mmcesim/mmcesim-gui - GitHub](https://gh-card.dev/repos/mmcesim/mmcesim-gui.svg)](https://github.com/mmcesim/mmcesim-gui)
