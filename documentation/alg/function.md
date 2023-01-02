@@ -153,6 +153,7 @@ you may use function [`NEW`](#new).
 
 C++
 ```cpp
+a = b + 2;
 a = arma::sin(b) * c;
 a = b.t() + c.i();
 c = b(2, 3);
@@ -257,7 +258,7 @@ Used in [`IF`](#if) block.
 {: .no_toc }
 
 This function implements as `else` in C++, Python and Matlab/Octave.
-There is no parameter for `ELSE` function.
+There is no parameter for the `ELSE` function.
 
 ### Example
 {: .no_toc }
@@ -314,6 +315,69 @@ Start a function definition.
 {: .no_toc }
 
 The function requires an [`END`](#end) to mark the end of function.
+
+***
+
+## FOR
+Start a `for` loop.
+
+### Explanations
+{: .no_toc }
+
+The parameters are similar to C++.
+
+| Position | Parameter Key | Descriptions |
+| :-: | :-: | :- |
+| 1 | `init` | Initialization before entering the loop. | 
+| 2 | `cond` | Condition to continue into the loop. | 
+| 3 | `oper` | Operation after each iteration. |
+
+{: .note }
+If there is `=` or other special characters inside your parameter or there exists space,
+do remember to place them inside double quotes (`"`).
+
+### Example
+{: .no_toc }
+
+<div class="code-example" markdown="1">
+
+C++
+```cpp
+for (uword i = 0; i != 10; i = i + 2) {
+    // Do something here in the for loop.
+}
+```
+
+</div>
+```ruby
+FOR "i::u0 = INIT 0" "i != 10" "i=i+2" # a for loop taking three parameters
+  COMMENT "Do something here in the for loop."
+END
+```
+
+***
+
+## FOREVER
+Repeat in the block until [`BREAK`](#break).
+
+### Example
+{: .no_toc }
+
+<div class="code-example" markdown="1">
+
+C++
+```cpp
+while (1) {
+    break;
+} 
+```
+
+</div>
+```ruby
+FOREVER # takes no param
+  BREAK # Wow, nothing is done when I just break here [Lol]
+END
+```
 
 ***
 
@@ -430,69 +494,6 @@ a = INIT 4 3 fill=ones scale=4 dtype=c # a matrix
 b::r = INIT 10 scale="-1+i" # row vector (viewed as a matrix)
 pi::f0c = INIT 3.1415926 # a const float
 random_number = INIT fill=randn scale=-2
-```
-
-***
-
-## FOR
-Start a `for` loop.
-
-### Explanations
-{: .no_toc }
-
-The parameters are similar to C++.
-
-| Position | Parameter Key | Descriptions |
-| :-: | :-: | :- |
-| 1 | `init` | Initialization before entering the loop. | 
-| 2 | `cond` | Condition to continue into the loop. | 
-| 3 | `oper` | Operation after each iteration. |
-
-{: .note }
-If there is `=` or other special characters inside your parameter or there exists space,
-do remember to place them inside double quotes (`"`).
-
-### Example
-{: .no_toc }
-
-<div class="code-example" markdown="1">
-
-C++
-```cpp
-for (uword i = 0; i != 10; i = i + 2) {
-    // Do something here in the for loop.
-}
-```
-
-</div>
-```ruby
-FOR "i::u0 = INIT 0" "i != 10" "i=i+2" # a for loop taking three parameters
-  COMMENT "Do something here in the for loop."
-END
-```
-
-***
-
-## FOREVER
-Repeat in the block until [`BREAK`](#break).
-
-### Example
-{: .no_toc }
-
-<div class="code-example" markdown="1">
-
-C++
-```cpp
-while (1) {
-    break;
-} 
-```
-
-</div>
-```ruby
-FOREVER # takes no param
-  BREAK # Wow, nothing is done when I just break here [Lol]
-END
 ```
 
 ***
