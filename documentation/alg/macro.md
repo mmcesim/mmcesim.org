@@ -51,7 +51,9 @@ for example `` `PILOT` ``.
 | `` `BEAM.T.y` `` | Transmitter Beam in $$y$$ Dimension | 12345 |
 | `` `BEAM.T` `` | Transmitter Beam (Antenna Number) | 12345 |
 | `` `BEAM.*` `` | Multiplication of Tx and Rx Beam  | 12345 |
+| `` `BF[<id>]` `` | Beamforming Matrix of Node `<id>` | 12345 |
 | `` `CARRIERS_NUM` `` | Number of OFDM Carriers | 1234 |
+| `` `CAS_CH` `` | Cascaded Channel | 12345 |
 | [`` `DICTIONARY.R` ``](#dictionaryr) | Receiver Dictionary Matrix | 12345 |
 | [`` `DICTIONARY.T` ``](#dictionaryt) | Transmitter Dictionary Matrix | 12345 |
 | `` `GRID.R.x` `` | Receiver Grid in $$x$$ Dimension | 12345 |
