@@ -10,9 +10,7 @@ has_children: false
 
 ## GitHub Releases
 
-So far, no download is available at [GitHub Releases](https://github.com/mmcesim/mmcesim/releases).
-You may test the unfinished v0.1.0 by compiling it yourself.
-
+You van download mmCEsim at [GitHub Releases](https://github.com/mmcesim/mmcesim/releases).
 
 Please [**STAR** the project on GitHub](https://github.com/mmcesim/mmcesim) (and maybe WATCH and FORK) to keep updated of
 the application design.
