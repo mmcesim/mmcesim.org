@@ -51,7 +51,7 @@ for example `` `PILOT` ``.
 | `` `BEAM.T.y` `` | Transmitter Beam in $$y$$ Dimension | 12345 |
 | `` `BEAM.T` `` | Transmitter Beam (Antenna Number) | 12345 |
 | `` `BEAM.*` `` | Multiplication of Tx and Rx Beam  | 12345 |
-| `` `BF[<id>]` `` | Beamforming Matrix of Node `<id>` | 12345 |
+| [`` `BF[<id>]` ``](#bfid) | Beamforming Matrix of Node `<id>` | 12345 |
 | `` `CARRIERS_NUM` `` | Number of OFDM Carriers | 1234 |
 | `` `CAS_CH` `` | Cascaded Channel | 12345 |
 | [`` `DICTIONARY.R` ``](#dictionaryr) | Receiver Dictionary Matrix | 12345 |
@@ -77,6 +77,7 @@ for example `` `PILOT` ``.
 | `` `SIZE.*` `` | Multiplication of Tx and Rx Size | 12345 |
 | `` `SNR_dB` `` | Signal-to-Noise Ratio (SNR) in dB | 12 |
 | `` `SNR_LINEAR` `` | Signal-to-Noise Ratio (SNR) | 12 |
+| `` `VAR` `` | Variable Name in Beamforming Design | [*temp*](#temporary-macro) |
 | `` `VERSION` `` | mmCEsim Version | 123456 |
 
 The supported scope is listed in
@@ -85,6 +86,7 @@ in the corresponding scope listed in the [Scope](#scope) section.
 ### Scope
 
 In the table above, the scope of macro means where the macro can be used safely.
+Those marked as *temp* are [temporary macros](#temporary-macro).
 
 | Scope | Description |
 | :-: | :-: |
@@ -94,6 +96,15 @@ In the table above, the scope of macro means where the macro can be used safely.
 | 4. Appendix | `appendix` part of configuration |
 | 5. Preamble | `preamble` part of configuration |
 | 6. Others | Any other part where ALG language is used. |
+
+### Temporary Macro
+Temporary macros are also valid in a small scope that can not be listed in 1-6 scopes.
+For example, the macro [`` `VAR` ``](#var) is only valid for beamforming design custom scheme.
+
+### `` `BF[<id>]` ``
+Get the `beamforming` matrix/cube `variable` name.
+For RIS, it is the reflection matrix.
+For Tx and Rx, it is the beamforming cube.
 
 ### `` `DICTIONARY.R` ``
 Receiver dictionary matrix.
@@ -108,6 +119,10 @@ This macro actually expands to CALC function [`\dictionary`](calc#dictionary).
 ### `` `NMSE` ``
 Normalized mean square error result is stored as a matrix
 with dimension of {Test Number of SNR/Pilot} $$\times$$ {Algorithm Number}.
+
+### `` `VAR` ``
+This macro returns the `variable` field of `beamforming` of a channel node.
+This is only valid in `nodes/<>/beamforming/formula` for the `custom` scheme.
 
 ### Additional Information
 
