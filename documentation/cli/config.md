@@ -122,7 +122,8 @@ Its corresponding [macro](../alg/macro)s in [CALC](../alg/calc) are
 ### Beamforming
 In the `beamforming` field, the variable name `variable` is set,
 and the beamforming scheme `scheme` is defined.
-Currently, the `scheme` only supports `random`.
+The `scheme` supports `random` and `custom`.
+For a custom beamforming scheme, you also need to set the `formula` field with ALG language.
 
 ***
 

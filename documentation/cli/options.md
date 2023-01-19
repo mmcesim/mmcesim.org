@@ -12,16 +12,16 @@ has_children: false
 
 With `mmcesim -h`, you can view all supported commands and options.
 ```
-mmCEsim 0.1.0    (C) Wuqiong Zhao
+mmCEsim 0.2.0  (C) 2022-2023 Wuqiong Zhao
 Millimeter Wave Channel Estimation Simulation
 =============================================
 
 Usage: ./mmcesim <command> <input> [options]
 
 Commands:
-  sim [simulate]         run simulation
-  dbg [debug]            debug simulation settings
-  exp [export]           export code
+  sim [ simulate ]       run simulation
+  dbg [ debug ]          debug simulation settings
+  exp [ export ]         export code
   config                 configure mmCEsim options
   (Leave empty)          generic use
 
@@ -38,7 +38,9 @@ Configuration:
   -l [ --lang ] arg      export language or simulation backend
   --value arg            value for configuration option
   -f [ --force ]         force writing mode
-  --no-error-compile     Do not raise error if simulation compiling fails
+  -V [ --verbose ]       print additional information
+  --no-error-compile     do not raise error if simulation compiling fails
+  --no-term-color        disable colorful terminal contents
 ```
 
 {: .note }
