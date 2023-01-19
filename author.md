@@ -22,7 +22,11 @@ He was also nominated as the most influential undergraduate student of Southeast
 His research interest includes channel estimation, Bayesian algorithms, and the intelligent reflecting surface (IRS) in wireless communication of 5G and 6G.
 He assisted editing the book *Channel Codes for 5G Wireless Systems* and the chapter *Stochastic Computation for Baseband Processing*.
 
+## Publications
+- **W. Zhao**, Y. You, L. Zhang, X. You, and C. Zhang, **[...] Algorithm for Intelligent Reflecting Surface-Aided mmWave Channel Estimation**, *IEEE Transactions on Vehicular Technology*, 2023, to be published.
+
 ## Other Open Source Projects
+- [**AHDW**](https://ahdw.org): Parameterized HDL Code Generation (part of the Auto HDW project)
 - [**Fractal Designer**](https://github.com/Teddy-van-Jerry/Fractal_Designer): Fractal Video Making Software (*MIT License*)
 - [**SEU-ML-Assign**](https://ctan.org/pkg/seu-ml-assign): Southeast University Machine Learning Assignment LaTeX Template
 
