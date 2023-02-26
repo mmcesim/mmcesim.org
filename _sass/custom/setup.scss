@@ -3,25 +3,6 @@ $pink-100: #f967f1;
 $pink-200: #e94ee1;
 $pink-300: #dd2cd4;
 
-// Print-only styles.
-@media print {
-  .side-bar,
-  .page-header {
-    display: none;
-  }
-  .main-content {
-    max-width: auto;
-    margin: 1em;
-  }
-}
-
-// Code block style.
-.highlight {
-	.n {
-		color: #525151;
-	}
-}
-
 pre.highlight {
   line-height: 1;
 }
