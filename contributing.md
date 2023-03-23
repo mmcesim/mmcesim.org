@@ -84,9 +84,18 @@ You may view [Citation](cite) for more information.
 
 ## Contributors
 <ul class="list-style-none">
-{% for contributor in site.github.contributors %}
+<!-- {% for contributor in site.github.contributors %}
   <li class="d-inline-block mr-1">
      <a href="{{ contributor.html_url }}"><img src="{{ contributor.avatar_url }}" width="32" height="32" alt="{{ contributor.login }}"></a>
   </li>
-{% endfor %}
+{% endfor %} -->
+  <li class="d-inline-block mr-1">
+    <a href="https://github.com/Teddy-van-Jerry"><img src="https://avatars.githubusercontent.com/u/70827985" width="32" height="32" alt="Teddy-van-Jerry"></a>
+  </li>
+  <li class="d-inline-block mr-1">
+    <a href="https://github.com/apps/dependabot"><img src="https://avatars.githubusercontent.com/in/29110" width="32" height="32" alt="dependabot[bot]"></a>
+  </li>
+  <li class="d-inline-block mr-1">
+    <a href="https://github.com/mmcesim-bot"><img src="https://avatars.githubusercontent.com/u/121534715" width="32" height="32" alt="mmcesim-bot"></a>
+  </li>
 </ul>
