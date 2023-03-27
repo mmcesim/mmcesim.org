@@ -193,7 +193,7 @@ The return value is the generated dictionary matrix which has type `c2c` (const 
 #### Example
 {: .no_toc }
 
-```ruby
+```alg
 # UPA Antenna size: 16x6, Grid size: 16x16
 D = \dictionary(16, 8, 16, 16)
 # This creates a new instance of dictionary matrix
@@ -237,7 +237,7 @@ I do not want to elaborate the rule here
 but only give several examples,
 and you can find the pattern easily.
 
-```py
+```alg
 # x is a vector (dim = 1)
 # A is a matrix (dim = 2)
 # Z is a tensor (dim = 3)

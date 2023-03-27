@@ -33,7 +33,7 @@ The language is specially designed so that it can be exported to C++
 Every line of ALG language calls a function.
 Let's first have a look at its basic structure before we cover its details.
 
-```ruby
+```alg
 ret1::type1 ret2 = FUNC param1 param2::type2 key1=value1 key2=value2::type3 # comments
 ```
 
@@ -163,7 +163,7 @@ arma::exp2(a + c % d) / e.st() - f(arma::span::all, 3, arma::span(1, index));
 
 </div>
 <!-- {% raw %} -->
-```ruby
+```alg
 a = CALC b + 2 # explicit CALC function
 a = \sin(b) @ c # implicit CALC function
 a = b^H + c^{-1} # conjugate transpose and inverse
@@ -214,7 +214,7 @@ Matlab/Octave
 ```
 
 </div>
-```
+```alg
 COMMENT Hi, this is a comment!
 ```
 
@@ -245,7 +245,7 @@ Python/Matlab/Octave
 ```
 
 </div>
-```ruby
+```alg
 CPP std::cout << "Standard C++ Language!" << std::endl;
 ```
 
@@ -349,7 +349,7 @@ for (uword i = 0; i != 10; i = i + 2) {
 ```
 
 </div>
-```ruby
+```alg
 FOR "i::u0 = INIT 0" "i != 10" "i=i+2" # a for loop taking three parameters
   COMMENT "Do something here in the for loop."
 END
@@ -373,7 +373,7 @@ while (1) {
 ```
 
 </div>
-```ruby
+```alg
 FOREVER # takes no param
   BREAK # Wow, nothing is done when I just break here [Lol]
 END
@@ -414,7 +414,7 @@ if (arma::accu(arma::pow(arma::abs(A), 2)) > 0.1 * threshold) {
 ```
 
 </div>
-```ruby
+```alg
 IF \accu(\pow(\abs(A), 2)) > 0.1 * threshold
   IF b < 0
     b = 0
@@ -489,7 +489,7 @@ std::complex<double> random_number = (-2) * arma::randn<std::complex<double>>();
 ```
 
 </div>
-```ruby
+```alg
 a = INIT 4 3 fill=ones scale=4 dtype=c # a matrix
 b::r = INIT 10 scale="-1+i" # row vector (viewed as a matrix)
 pi::f0c = INIT 3.1415926 # a const float
@@ -543,7 +543,7 @@ for (auto i = 0; i < 10; ++i) {
 ```
 
 </div>
-```ruby
+```alg
 LOOP 0 10 # implicit counter name as 'i'
   COMMENT 0, 1, 2, ..., 9
   j = LOOP from=10 to=0 step=-1
@@ -578,7 +578,7 @@ std::cout << 1 << '\t' << H << '\n';
 ```
 
 </div>
-```ruby
+```alg
 PRINT 1 '\t' H '\n'
 ```
 
@@ -644,7 +644,7 @@ cx_vec y = H * x + n;
 ```
 
 </div>
-```ruby
+```alg
 y::v = NEW H @ x + n
 ```
 
@@ -678,7 +678,7 @@ while (i != 100 && result == false) {
 ```
 
 </div>
-```ruby
+```alg
 WHILE i != 100 && result == false # no quote is needed because there will be only one param
   COMMENT "Do something in the while loop."
 END

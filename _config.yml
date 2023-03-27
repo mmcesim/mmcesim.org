@@ -1,4 +1,12 @@
-remote_theme: just-the-docs/just-the-docs
+theme: just-the-docs
+github: [metadata]
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+safe: false
 
 title: mmCEsim
 description: Millimeter Wave Channel Estimation Simulation
