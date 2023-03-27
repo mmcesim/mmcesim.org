@@ -27,7 +27,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       rule %r/\\[0-9A-Za-z_]+/, Name::Function::Magic
       rule %r/\`(.*?)\`/, Str::Backtick
 
-      rule %r/(begin|end|from|to|step|scale|fill|dtype|key1|key2)=/, Name::Label
+      rule %r/(begin|cond|end|from|to|step|scale|fill|dtype|key1|key2)=/, Name::Label
 
       rule %r/\^[TtHIi]/, Operator
       rule %r/(\^(\*|\\star|\\ast))|\^\{([TtHIi\*]|\\star|\\ast|-1)\}/, Operator
