@@ -22,7 +22,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       rule %r/std::\w+/, Name
 
       rule %r/::[0-9A-Za-z]*/, Keyword::Type
-      rule %r/::/, Punctuation
+      rule %r/::/, Punctuation # not used
 
       rule %r/\\[0-9A-Za-z_]+/, Name::Function::Magic
       rule %r/\`(.*?)\`/, Str::Backtick

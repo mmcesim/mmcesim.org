@@ -2,7 +2,13 @@
 Millimeter Wave Channel Estimation Simulation Website Contents.
 Contents are published at [https://mmcesim.org](https://mmcesim.org).
 
+## ALG Lexer
+The ALG language lexer is defined in [`_plugins/alg_highlighter.rb`](_plugins/alg_highlighter.rb),
+which implements basic highlighting of the ALG language blocks (with tag `alg`).
 
 ## Hosting
-This website is hosted no Netlify,
+This website is hosted on Netlify,
 since we have custom plugins not supported by GitHub Pages.
+
+## License
+The source of the website is distributed by an [MIT License](LICENSE).
