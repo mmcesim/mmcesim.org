@@ -63,7 +63,7 @@ For more information, please refer to the project [CONTRIBUTING](https://github.
 [![mmcesim/mmcesim-vscode - GitHub](https://gh-card.dev/repos/mmcesim/mmcesim-vscode.svg)](https://github.com/mmcesim/mmcesim-vscode)
 
 ### Documentation Website
-[![mmcesim/mmcesim.github.io - GitHub](https://gh-card.dev/repos/mmcesim/mmcesim.github.io.svg)](https://github.com/mmcesim/mmcesim.github.io)
+[![mmcesim/mmcesim.org - GitHub](https://gh-card.dev/repos/mmcesim/mmcesim.org.svg)](https://github.com/mmcesim/mmcesim.org)
 
 ***
 
