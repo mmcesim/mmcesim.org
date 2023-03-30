@@ -20,11 +20,11 @@ The C++ code style is based on LLVM,
 with additional configuration listed in [`.clang-format`](https://github.com/mmcesim/mmcesim/blob/master/.clang-format).
 Please run
 ```
-.misc/format
+misc/format
 ```
 to format the code before committing.
 Appropriate permission is needed.
-On a Unix (Linux and macOS) system, you may use `chmod +x ./misc/format`.
+On a Unix (Linux and macOS) system, you may use `chmod +x misc/format`.
 
 ***
 
