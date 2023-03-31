@@ -11,7 +11,7 @@ has_children: false
 # Tools
 
 Three tools ([`compose`](#compose), [`log`](#log), [`maintain`](#maintain))
-are available to aid the use of CLI use of mmCEsim.
+are available to aid the CLI use of mmCEsim.
 
 ## Compose
 Compose `.sim` configure from command line options.
@@ -35,4 +35,4 @@ Use `mmcesim-log -h` for more information.
 
 ## Maintain
 You can view the latest stable version available with `mmcesim-maintain -l`.
-This internally invoke `curl https://mmcesim.org/VERSION`, so you need to have `curl` installed.
+This internally invokes `curl https://mmcesim.org/VERSION`, so you need to have `curl` installed.
