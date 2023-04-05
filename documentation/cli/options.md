@@ -12,7 +12,7 @@ has_children: false
 
 With `mmcesim -h`, you can view all supported commands and options.
 ```
-mmCEsim 0.2.0  (C) 2022-2023 Wuqiong Zhao
+mmCEsim 0.2.1  (C) 2022-2023 Wuqiong Zhao
 Millimeter Wave Channel Estimation Simulation
 =============================================
 

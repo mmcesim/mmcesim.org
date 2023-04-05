@@ -31,7 +31,7 @@ On a Unix (Linux and macOS) system, you may use `chmod +x misc/format`.
 ## All Repositories
 
 ### CLI Application
-[![mmcesim/mmcesim - GitHub](https://gh-card.dev/repos/mmcesim/mmcesim.svg)](https://github.com/mmcesim/mmcesim)
+[![mmcesim/mmcesim - GitHub](https://github-readme-stats.vercel.app/api/pin/?username=mmcesim&repo=mmcesim)](https://github.com/mmcesim/mmcesim)
 
 The project is configured with CMake, and the role of each folder is listed below.
 - `include`: C++ Header Files (`.h`)
@@ -46,7 +46,8 @@ The project is configured with CMake, and the role of each folder is listed belo
   - `fmt`: C++ String Format (Like That in C++20)
   - `yaml-cpp`: Parse YAML Configuration (`.sim`)
 - `test`: Test Files Including `CTest` Configuration
-- `doc`: Documentation (*Currently Empty*)
+- `tools`: Accompanying Tools (`log`, `compose` and `maintain`)
+- `doc`: PDF Documentation (Written in LaTeX)
 - `bin`: Generated Binary Executable
 - `misc`: Miscellaneous Files
 
@@ -54,16 +55,16 @@ The project is configured with CMake, and the role of each folder is listed belo
 For more information, please refer to the project [CONTRIBUTING](https://github.com/mmcesim/mmcesim/tree/master/CONTRIBUTING.md) and [Wiki](https://github.com/mmcesim/mmcesim/wiki). The [Doxygen documentation](https://dev.mmcesim.org) for C++ is also available.
 
 ### GUI Application
-[![mmcesim/mmcesim-gui - GitHub](https://gh-card.dev/repos/mmcesim/mmcesim-gui.svg)](https://github.com/mmcesim/mmcesim-gui)
+[![mmcesim/mmcesim-gui - GitHub](https://github-readme-stats.vercel.app/api/pin/?username=mmcesim&repo=mmcesim-gui)](https://github.com/mmcesim/mmcesim-gui)
 
 ### Web Application
-[![mmcesim/mmcesim-web - GitHub](https://gh-card.dev/repos/mmcesim/mmcesim-web.svg)](https://github.com/mmcesim/mmcesim-web)
+[![mmcesim/mmcesim-web - GitHub](https://github-readme-stats.vercel.app/api/pin/?username=mmcesim&repo=mmcesim-web)](https://github.com/mmcesim/mmcesim-web)
 
 ### VS Code Extension
-[![mmcesim/mmcesim-vscode - GitHub](https://gh-card.dev/repos/mmcesim/mmcesim-vscode.svg)](https://github.com/mmcesim/mmcesim-vscode)
+[![mmcesim/mmcesim-vscode - GitHub](https://github-readme-stats.vercel.app/api/pin/?username=mmcesim&repo=mmcesim-vscode)](https://github.com/mmcesim/mmcesim-vscode)
 
 ### Documentation Website
-[![mmcesim/mmcesim.org - GitHub](https://gh-card.dev/repos/mmcesim/mmcesim.org.svg)](https://github.com/mmcesim/mmcesim.org)
+[![mmcesim/mmcesim.org - GitHub](https://github-readme-stats.vercel.app/api/pin/?username=mmcesim&repo=mmcesim.org)](https://github.com/mmcesim/mmcesim.org)
 
 ***
 
