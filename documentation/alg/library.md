@@ -47,6 +47,18 @@ Orthogonal matching pursuit.
 >
 > Defined in [`/include/mmcesim/OMP.alg`](https://github.com/mmcesim/mmcesim/blob/master/include/mmcesim/OMP.alg).
 
+### OMPL
+OMP List.
+
+This algorithm is proposed in [OMPL-SBL Algorithm for Intelligent Reflecting Surface-Aided mmWave Channel Estimation](https://eprints.whiterose.ac.uk/196887/) *(TVT'23)*, extending OMP with the k-best idea.
+
+Dependency: [`max_n`](#max_n).
+
+{: .note-title }
+> Source
+>
+> Defined in [`/include/mmcesim/OMPL.alg`](https://github.com/mmcesim/mmcesim/blob/master/include/mmcesim/OMPL.alg).
+
 ### LS
 Least square (LS).
 
@@ -72,3 +84,11 @@ Least square (LS) with specified support.
 > Defined in [`/include/mmcesim/LS_support.alg`](https://github.com/mmcesim/mmcesim/blob/master/include/mmcesim/LS_support.alg).
 
 ## Other Utilities
+
+### max_n
+Obtain the largest n elements from a vector.
+
+{: .note-title }
+> Source
+>
+> Defined in [`/include/mmcesim/max_n.alg`](https://github.com/mmcesim/mmcesim/blob/master/include/mmcesim/max_n.alg).
