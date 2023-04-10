@@ -498,6 +498,33 @@ random_number = INIT fill=randn scale=-2
 
 ***
 
+## LOG
+Write to log file.
+
+### Example
+{: .no_toc }
+
+<div class="code-example" markdown="1">
+
+Log file: `mmcesim.log`
+```log
+[INFO] $ LOG [INFO] A user-defined message.
+[INFO] * FUNCTION: LOG
+[INFO] * PARAMS:
+[INFO]    > {}={[INFO]}::{}
+[INFO]    > {}={A}::{}
+[INFO]    > {}={user-defined}::{}
+[INFO]    > {}={message.}::{}
+[INFO] A user-defined LOG message.
+```
+
+</div>
+```alg
+LOG [INFO] A user-defined message.
+```
+
+***
+
 ## LOOP
 Loop with iteration counter.
 

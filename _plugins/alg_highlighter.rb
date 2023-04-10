@@ -11,7 +11,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
     filenames '*.alg', '*.mmcesim-alg'
 
     state :root do
-      rule %r/(BRANCH|BREAK|CALC|CALL|COMMENT|CPP|ESTIMATE|FUNC|INIT|MATLAB|MERGE|NEW|OCTAVE|PRINT|PYTHON|RECOVER|ELSE|ELIF|FOR|FOREVER|FUNCTION|IF|LOOP|WHILE|END|ELSE|ELIF)\b/, Keyword::Reserved
+      rule %r/(BRANCH|BREAK|CALC|CALL|COMMENT|CPP|ESTIMATE|FUNC|INIT|MATLAB|MERGE|NEW|OCTAVE|PRINT|PYTHON|RECOVER|ELSE|ELIF|FOR|FOREVER|FUNCTION|IF|LOOP|WHILE|END|ELSE|ELIF|LOG)\b/, Keyword::Reserved
       rule %r/(true|false)\b/, Name::Constant
       rule %r/#.*$/, Comment::Single
 
