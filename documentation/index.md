@@ -11,4 +11,4 @@ has_children: true
 {: .note }
 The documentation is being worked on.
 
-The most detailed part is [ALG language](doc/alg) which has been fully designed and partly implemented.
+The most detailed part is [ALG language](/doc/alg) which has been fully designed and partly implemented.
