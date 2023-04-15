@@ -21,11 +21,11 @@ window.addEventListener("DOMContentLoaded", function() {
 
   function setTheme(theme) {
     if (theme === 'dark') {
-      toggleDarkMode.innerHTML = `<svg width='18px'><use href="#svg-moon"></use></svg>`;
+      toggleDarkMode.innerHTML = `<svg width='18px' height='18px'><use href="#svg-moon"></use></svg>`;
       document.documentElement.classList.add('dark-mode');
       document.documentElement.classList.remove('light-mode');
     } else {
-      toggleDarkMode.innerHTML = `<svg width='18px'><use href="#svg-sun"></use></svg>`;
+      toggleDarkMode.innerHTML = `<svg width='18px' height='18px'><use href="#svg-sun"></use></svg>`;
       document.documentElement.classList.add('light-mode');
       document.documentElement.classList.remove('dark-mode');
     }
