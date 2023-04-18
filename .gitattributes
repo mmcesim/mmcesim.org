@@ -1,1 +1,5 @@
 *.css linguist-vendored
+
+404.html linguist-language=Liquid
+_includes/head.html linguist-language=Liquid
+_includes/head_custom.html linguist-language=Liquid
