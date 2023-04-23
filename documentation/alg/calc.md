@@ -26,7 +26,7 @@ mathjax: true
 ## Design Inspirations
 
 Let's have a look at the example below.
-```tex
+```alg
 \sqrt(\accu(\pow(\abs(A_{1,:,2:5} - B^{-1}), 2))) * c * A @ (D ./ E^T) + \sin(f_{2})
 ```
 Well, that looks like $$\rm\LaTeX$$, right?
@@ -234,7 +234,7 @@ They are `_{}`, `_{:}`, `_{:,:}`, `_{:,:,:}`.
 The contents inside `_{}` of valid subscripts are similar
 to MATLAB syntax except for indices start from 0.
 
-- For a vector `x`, use `x_{n}` to access the nth element, and `x_{begin:end}` to access a range of elements.
+- For a vector `x`, use `x_{n}` to access the *n*-th element, and `x_{begin:end}` to access a range of elements.
 - For a matrix `A`, use `A_{i,j}` to access an individual element, `A_{i,:}` to access an entire row, `A_{:,j}` to access an entire column, `A_{i:j,l:m}` to access a range of rows and columns, and `A_{:,:,k}` to access a slice of the matrix.
 - For a tensor `Z`, use `Z_{i,j,k}` to access an individual element, `Z_{:,:,k}` to access a slice of the tensor, and `Z_{:,:,indices}` to access multiple slices where `indices` is of type `u1`. Accessing indices vector of type `u1` for a tensor is only supported for the last dimension.
 
