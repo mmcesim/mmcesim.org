@@ -101,3 +101,4 @@ exclude:
   - Gemfile.lock
   - assets/css/just-the-docs-switchable-src.css
   - _sass # I have used pure CSS now
+  - serve
