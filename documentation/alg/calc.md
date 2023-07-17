@@ -33,7 +33,7 @@ Well, that looks like $$\rm\LaTeX$$, right?
 The familiar `\` character starting a command (sorry, that's called macro in LaTeX),
 and inverse as `^{-1}`, transpose `^T`, and subscript with `_{}`!
 
-Well, let's write the above example in LaTeX (tough some informal Matlab style subscript)
+Well, let's write the above example in LaTeX (through some informal Matlab style subscript)
 <div class="code-example" markdown="1">
 
 <!-- {% raw %} -->
@@ -73,8 +73,8 @@ There are [commands](#commands) starting with backslash (`\`),
 > Variable Naming
 >
 > - Variable names should not contain reserved characters `` !@#$%^&*()[]{}\|/-+=~,.<>?:;"'` ``.
-> - Variable name should also end with underscore (`_`).
-> - Number can not be the first character of variable name.
+> - Variable name should also not end with underscore (`_`).
+> - Digit can not be the first character of variable name.
 > - Variable name should not clash with reserved keywords.
 
 Note that **whitespace does not matter** and are actually removed before parsing.
@@ -88,7 +88,7 @@ Note that **whitespace does not matter** and are actually removed before parsing
 | Operators | Description |
 | :-: | :-: |
 | `+`, `-` | (Unary/Binary) plus/minus |
-| `*` | Scalar and scalar multiplication, Scalar and matrix multiplication |
+| `*` | Scalar and scalar multiplication, scalar and matrix multiplication |
 | `@` | Matrix and matrix multiplication |
 | `.*`, `./` | Element-wise multiplication, division |
 | `!` | Logical NOT |
@@ -111,7 +111,7 @@ Note that **whitespace does not matter** and are actually removed before parsing
 The following table lists the precedence and associativity of ALG CALC operators.
 Operators are listed top to bottom, in descending precedence.
 
-| Precedence | Operator | Description | Associativity |
+| Precedence | Operators | Description | Associativity |
 | :-: | :-: | :-: | :-: |
 | 1 | `()`, `{}` | Command call | Left-to-right |
 | 2 | `^T`, `^H`, `^t`, `^i`, `^*`, `^{-1}` | Matrix superscript | Left-to-right |
@@ -143,9 +143,9 @@ Here are the basic rules for command usage:
 The function naming convention mainly follows that of [Armadillo](https://arma.sourceforge.net/docs.html) which is also similar to MATLAB.
 
 ### \dictionary
-Generate a dictionary matrix.
+Generate a dictionary matrix for beamspace (virtual) representation.
 
-#### Maths Representation
+#### Math Representation
 {: .no_toc }
 
 The complex dictionary matrix is used in compressed sensing (CS).
@@ -204,7 +204,7 @@ D::mc = NEW `DICTIONARY.T`
 
 {: .tip }
 For simplicity, you may use [macros](macro)
-to simplicity the `\dictionary` function.
+to simplicity the `\dictionary` command.
 The `` `DICTIONARY.T` `` and `` `DICTIONARY.R` `` macros
 can be used to represent the dictionary at the transmitter side and receiver side
 without specifying the parameters as long as they are specified in the `nodes`
@@ -217,14 +217,14 @@ section of `.sim` configuration.
 Subscripts take the subview of vector/matrix/tensor.
 The syntax is `_{<sub>}` (a leading underscore `_` as in LaTeX),
 where the brackets cannot be omitted
-even if `sub` contains only one character.
+even if `<sub>` contains only one character.
 
 {: .warning }
 > The subscript syntax imposes a requirement for variables:
 > variables cannot be ended with character underscore (`_`).
 >
 > Due to internal underscore is allowed for variable names,
-> the subscript is only recognized when brackets `{}` exists.
+> the subscript is only recognized when brackets `{}` exist.
 
 ### Foo Subscripts
 Well, some subscripts just do nothing, so they are removed.
@@ -301,4 +301,4 @@ The conjugate of a complex number/vector/matrix/tensor is
 
 The inverse of a square matrix is `^{-1}`, `^i` or `^I`.
 
-For a non-square matrix, you may use `\pinv` (pseudo-inverse) function.
+For a non-square matrix, you may use `\pinv` (pseudo-inverse) command.

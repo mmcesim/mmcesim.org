@@ -81,7 +81,7 @@ They are the one character alias for a two-character type.
 >
 > Row vector (`r`) is actually regarded as a matrix for simplicity,
 > so its dimension is still 2.
-> Only column vector (`c`) is the real vector.
+> Only column vector (`v`) is the real vector.
 > But there can be differences in terms of [`INIT`](function#init),
 > so it should not be confused with `m`.
 

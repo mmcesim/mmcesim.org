@@ -23,7 +23,8 @@ His research interest includes channel estimation, Bayesian algorithms, and the 
 He is also the reviewer of IEEE TCAS II and ISCAS 2023.
 
 ## Publications
-- **W. Zhao**, Y. You, L. Zhang, X. You, and C. Zhang, **OMPL-SBL Algorithm for Intelligent Reflecting Surface-Aided mmWave Channel Estimation**, *IEEE Transactions on Vehicular Technology*, 2023, to be published.
+- **W. Zhao**, Y. You, L. Zhang, X. You, and C. Zhang, [**OMPL-SBL Algorithm for Intelligent Reflecting Surface-Aided mmWave Channel Estimation**](https://ieeexplore.ieee.org/document/10164645), *IEEE Transactions on Vehicular Technology*, 2023, early access, Doi: [10.1109/TVT.2023.3287400](https://doi.org/10.1109/TVT.2023.3287400).
+- Y. You, **W. Zhao**, L. Zhang, X. You, and C. Zhang, **Beam Pattern and Reflection Pattern Design for Channel Estimation in RIS-assisted mmWave MIMO Systems**, *IEEE Transactions on Vehicular Technology*, 2023, to be published.
 
 ## Other Open Source Projects
 - [**AHDW**](https://ahdw.org): Parameterized HDL Code Generation (part of the Auto HDW project)

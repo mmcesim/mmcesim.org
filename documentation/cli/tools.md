@@ -14,13 +14,13 @@ Three tools ([`compose`](#compose), [`log`](#log), [`maintain`](#maintain))
 are available to aid the CLI use of mmCEsim.
 
 ## Compose
-Compose `.sim` configure from command line options.
+Compose `.sim` configuration file from command line options.
 
 {: .note }
 This is still under development.
 
 ## Log
-View or copy mmCEsim the log file with `mmcesim-log`.
+View or copy mmCEsim log file with `mmcesim-log`.
 
 | CLI Options | Description |
 | :-: | :-: |
@@ -30,6 +30,15 @@ View or copy mmCEsim the log file with `mmcesim-log`.
 | `-c` | copy mmCEsim log to clipboard |
 | `-f` | show mmCEsim log file location |
 
+If no option is provided, it will use the `-p` option to print the log.
+You can use several options together, such as `-cp` to print and copy.
+
+{: .tip }
+You can use `grep` to filter the log, for example use
+```sh
+mmcesim-log | grep "\[ERROR\]"
+```
+to get all error messages.
 
 Use `mmcesim-log -h` for more information.
 

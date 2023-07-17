@@ -67,11 +67,6 @@ Command `exp` exports the `.sim` configuration and corresponding
 `.alg` algorithms to a selected language.
 Currently, only export to C++ with Armadillo is supported.
 
-### dbg
-Debug the simulation.
-This is different from [`sim`](#sim) in that the generated C++ code is compiled with `-g3` instead of `-O3`.
-Therefore, debug information is retained.
-
 ### sim
 Command `sim` simulates the exported code with the selected backend.
 Currently, only C++ with Armadillo is supported.
@@ -80,6 +75,11 @@ So far, only C++ compiler `g++` (default) and `clang++` are supported
 which can be configured with command [`cfg`](#cfg).
 You may also need to configure additional C++ flags with `cfg cppflags`
 if by default the compiler cannot find [`armadillo`](https://arma.sourceforge.net) library.
+
+### dbg
+Debug the simulation.
+This is different from [`sim`](#sim) in that the generated C++ code is compiled with `-g3` instead of `-O3`.
+Therefore, debug information is retained.
 
 ### cfg
 Configure settings.
@@ -118,14 +118,14 @@ Set the export language or simulation backend.
 ### `--value`
 The value for configuration options.
 
-### `-f`
+### `-f` (`--force`)
 Enable the force writing mode.
 This will overwrite existent output files.
 
 ### `-V` (`--verbose`)
 Print additional information.
 
-### `--no-error-complete`
+### `--no-error-compile`
 Do not raise error if compiling fails.
 This is useful in the [`dbg`](#dbg) and [`sim`](#sim) command.
 

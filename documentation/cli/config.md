@@ -28,69 +28,67 @@ please refer to [this blog](https://blog.mmcesim.org/2022/07/file-format-yaml/).
 
 ***
 
-## Version
+## `version`
 This field (`version`) takes a string value representing the targeted mmCEsim version.
 For compatibility convenience, this string can be used by the compiler
-to decide the behaviour.
-The current default value is the same as the compiler version (`0.1.0`).
+to decide the behavior.
+The current default value is the same as the compiler version (`0.2.1`).
 
 ***
 
-## Meta
-The `meta` is a map that provides metadata which can be used in report.
+## `meta`
+The `meta` is a map that provides metadata which can be used in the report.
 The used fields now include: `title`, `description`, `author`.
 
 ***
 
-## Physics
+## `physics`
 The `physics` map contains physical system settings.
 
-### Frequency
+### `frequency`
 The bandwidth is specified in `frequency` filed.
-Currently, this field does not do anything,
-which is always assumed to be `narrow` (narrow band) now.
+which can have value `narrow` for narrowband or `wide` for wideband.
 
-### Off Grid
+### `off_grid`
 This is actually about the model.
 With the geometric channel model with grid,
 there can be off-grid (or power leakage) problems.
 Recently, there are also super resolution formulations to solve the problem.
 But we still adopt the grid representation for its popularity and simplicity.
 By setting `off_grid` field inside `physics` to `false`,
-you may not consider the off grid effect.
+the off grid effect is discarded, i.e. all angles fall on the grid.
 The default value is `true`.
 
-### Carriers
+### `carriers`
 For a wideband system,
 you may specify the number of carriers used in OFDM.
-Its corresponding [macro](../alg/macro)s in [CALC](../alg/calc) is
+Its corresponding [macro](../alg/macro) in [CALC](../alg/calc) is
 `` `CARRIERS_NUM` ``.
 
 ***
 
-## Nodes
-The `nodes` is a sequence (array) of nodes in the channel network.
+## `nodes`
+A sequence (array) of nodes in the channel network.
 Transmitter (Tx), Receiver (Rx), Reconfigurable Intelligent Surface (RIS)
 are all considered node (channels are the connecting edges to these nodes).
 For each of its elements, you need to specify the following fields.
 
-### ID
+### `id`
 You need to specify a unique `id` for each node.
 They are used in [`channels`](#channels) so that we know the direction of channel.
 
-### Role
+### `role`
 The `role` field has valid values `transmitter` (`Tx`), `receiver` (`Rx`),
 and `RIS` (`IRS`).
 
-### Num
-The optional field `num` can be used to mean several copies of the same node
-can be available for simplicity.
+### `num`
+The field `num` can be used to replicate several copies of the same node.
 This is often used for multi-user scenarios.
 Currently, this value is discarded, and the number is always 1.
 
-### Size
+### `size`
 The `size` means the antenna/element number for a node.
-For Transmitters and receivers, it is the antenna number.
+For transmitters and receivers, it is the antenna number.
 For RIS, it is the number of reflecting elements.
 The value is a scalar for uniform linear array (ULA),
 and is a 2-value array (for example `[8, 4]`) for uniform planar array (UPA).
@@ -101,7 +99,7 @@ Its corresponding [macro](../alg/macro)s in [CALC](../alg/calc) are
 `` `SIZE.T.x` ``, `` `SIZE.T.y` ``, `` `SIZE.T` ``,
 `` `SIZE.R.x` ``, `` `SIZE.R.y` ``, `` `SIZE.R` ``, `` `SIZE.*` ``.
 
-### Beam
+### `beam`
 The number of beams.
 Dimensions similar to [Size](#size).
 
@@ -109,7 +107,7 @@ Its corresponding [macro](../alg/macro)s in [CALC](../alg/calc) are
 `` `BEAM.T.x` ``, `` `BEAM.T.y` ``, `` `BEAM.T` ``,
 `` `BEAM.R.x` ``, `` `BEAM.R.y` ``, `` `BEAM.R` ``, `` `BEAM.*` ``.
 
-### Grid
+### `grid`
 The number of grids.
 Dimensions similar to [Size](#size).
 This is used in [CALC](../alg/calc) function [`\dictionary`](../alg/calc#dictionary)
@@ -119,7 +117,7 @@ Its corresponding [macro](../alg/macro)s in [CALC](../alg/calc) are
 `` `GRID.T.x` ``, `` `GRID.T.y` ``, `` `GRID.T` ``,
 `` `GRID.R.x` ``, `` `GRID.R.y` ``, `` `GRID.R` ``, `` `GRID.*` ``.
 
-### Beamforming
+### `beamforming`
 In the `beamforming` field, the variable name `variable` is set,
 and the beamforming scheme `scheme` is defined.
 The `scheme` supports `random` and `custom`.
@@ -127,32 +125,32 @@ For a custom beamforming scheme, you also need to set the `formula` field with A
 
 ***
 
-## Macro
+## `macro`
 User-defined macros are defined here.
 Please refer to [documentation of macro](../alg/macro#user-defined-macros) for more information.
 
 ***
 
-## Channels
+## `channels`
 The configuration `channels` is a sequence (array) of channel links.
 The settings for each channel link is shown below.
 
-### ID
+### `id`
 Similar to [ID](#id) in [Nodes](#nodes),
 each channel link has a unique identifier as in field `id`.
 
-### From
-The node which the link channel is transmitter from.
+### `from`
+The node which the link channel is transmitted from.
 (`from`)
 
-### To
+### `to`
 The node which the link channel transmits to.
 (`to`)
 
-### Sparsity
+### `sparsity`
 The `sparsity` (number of clusters) of the channel.
 
-### Gains
+### `gains`
 The channel `gains` consisting of pass loss.
 There are two types of gains supported (`mode`):
 `normal` and `uniform`.
@@ -161,10 +159,10 @@ For `uniform` gains, `min` and `max` need to be set.
 
 ***
 
-## Sounding
+## `sounding`
 Information related to the sounding procedure is defined here.
 
-### Variables
+### `variables`
 Channel `variables` names are defined here.
 - `received`: received signal vector
 - `noise`: received noise vector
@@ -172,7 +170,7 @@ Channel `variables` names are defined here.
 
 ***
 
-## Preamble
+## `preamble`
 The `preamble` is code part before main simulation
 (including sounding, estimation and report generation).
 
@@ -183,7 +181,7 @@ This part is specified using the [ALG language](../alg).
 
 ***
 
-## Estimation
+## `estimation`
 The main code for `estimation`.
 Function [`ESTIMATE`](../alg/function#estimate) is used here
 to call the compressed sensing (CS) algorithms
@@ -202,7 +200,7 @@ This part is specified using the [ALG language](../alg).
 
 ***
 
-## Conclusion
+## `conclusion`
 In `conclusion`,
 additional code after each [simulation job](#jobs)
 is added here.
@@ -211,24 +209,24 @@ This part is specified using the [ALG language](../alg).
 
 ***
 
-## Appendix
+## `appendix`
 The code in `appendix` is added after all jobs are done.
 
 This part is specified using the [ALG language](../alg).
 
 ***
 
-## Simulation
+## `simulation`
 
-### Backend
+### `backend`
 The `backend` includes `cpp` (C++ with Armadillo library),
 `python` (Python with NumPy library)
 and `matlab` or `octave`.
 This sets the language it exports to and the backend simulation bases on.
 
-### Jobs
+### `jobs`
 
-### Report
+### `report`
 
 #### Text Report
 

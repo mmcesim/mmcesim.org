@@ -251,14 +251,13 @@ CPP std::cout << "Standard C++ Language!" << std::endl;
 
 ***
 
-## ELSE
-Used in [`IF`](#if) block.
+## ELIF
+Alias for the continuous [`ELSE`](#else) and [`IF`](#if).
 
 ### Explanations
 {: .no_toc }
 
-This function implements as `else` in C++, Python and Matlab/Octave.
-There is no parameter for the `ELSE` function.
+The parameter is the same as [`IF`](#if).
 
 ### Example
 {: .no_toc }
@@ -267,13 +266,14 @@ Example with [`IF`](#if).
 
 ***
 
-## ELIF
-Alias for the continuous [`ELSE`](#else) and [`IF`](#if).
+## ELSE
+Used in [`IF`](#if) block.
 
 ### Explanations
 {: .no_toc }
 
-The parameter is the same as [`IF`](#if).
+This function implements as `else` in C++, Python and Matlab/Octave.
+There is no parameter for the `ELSE` function.
 
 ### Example
 {: .no_toc }
@@ -305,16 +305,6 @@ Example with [`FOR`](#for), [`FOREVER`](#forever), [`IF`](#if),
 ## ESTIMATE
 [CALL](#call) [standard ALG functions](library) to estimate the sparse channel
 with compressed sensing (CS).
-
-***
-
-## FUNCTION
-Start a function definition.
-
-### Explanations
-{: .no_toc }
-
-The function requires an [`END`](#end) to mark the end of function.
 
 ***
 
@@ -369,7 +359,7 @@ C++
 ```cpp
 while (1) {
     break;
-} 
+}
 ```
 
 </div>
@@ -378,6 +368,16 @@ FOREVER # takes no param
   BREAK # Wow, nothing is done when I just break here [Lol]
 END
 ```
+
+***
+
+## FUNCTION
+Start a function definition.
+
+### Explanations
+{: .no_toc }
+
+The function requires an [`END`](#end) to mark the end of function.
 
 ***
 
@@ -472,7 +472,7 @@ but if you want to use `fill` and `scale`, you must specify the parameter key.
 {: .tip }
 Since the development of ALG concentrates on matrix operations,
 the initialization also performs in a matrix-oriented way.
-Please refer to [data type of ALG language](type) is you are not sure
+Please refer to [data type of ALG language](type) if you are not sure
 how the data type works.
 
 ### Example
@@ -528,7 +528,7 @@ LOG [INFO] A user-defined message.
 ## LOOP
 Loop with iteration counter.
 
-### Descriptions
+### Explanations
 {: .no_toc }
 
 The `LOOP` function uses an iteration counter to control the loop.
