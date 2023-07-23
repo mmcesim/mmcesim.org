@@ -1,2 +1,2 @@
 # Issue with /example subdirectory
-/MIMO_OFDM_OMP/* example/MIMO_OFDM_OMP/:splat
+/MIMO_OFDM_OMP/* /example/MIMO_OFDM_OMP/:splat
