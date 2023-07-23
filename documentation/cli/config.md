@@ -111,7 +111,7 @@ Its corresponding [macro](../alg/macro)s in [CALC](../alg/calc) are
 The number of grids.
 Dimensions similar to [Size](#size).
 This is used in [CALC](../alg/calc) function [`\dictionary`](../alg/calc#dictionary)
-and [macro](../alg/macro) [`` `DICTIONARY.T` ``](`../alg/macro#dictionaryt`) and [`` `DICTIONARY.R` ``](`../alg/macro#dictionaryr`).
+and [macro](../alg/macro) [`` `DICTIONARY.T` ``](../alg/macro#dictionaryt) and [`` `DICTIONARY.R` ``](../alg/macro#dictionaryr).
 
 Its corresponding [macro](../alg/macro)s in [CALC](../alg/calc) are
 `` `GRID.T.x` ``, `` `GRID.T.y` ``, `` `GRID.T` ``,
