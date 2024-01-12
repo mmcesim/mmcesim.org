@@ -601,7 +601,7 @@ html {
 }
 
 body {
-  font-family: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif;
+  font-family: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Segoe UI Emoji";
   font-size: inherit;
   line-height: 1.4;
   color: #5c5962;
@@ -783,7 +783,7 @@ blockquote {
   .site-nav,
   .site-header,
   .site-footer {
-    width: 264px;
+    width: 16.5rem;
   }
 }
 
@@ -1632,6 +1632,16 @@ h6,
 }
 .btn-green.selected:hover {
   background-color: #0d8662;
+}
+
+.btn-reset {
+  background: none;
+  border: none;
+  margin: 0;
+  text-align: inherit;
+  font: inherit;
+  border-radius: 0;
+  appearance: none;
 }
 
 .search {
@@ -8596,7 +8606,7 @@ html.dark-mode html {
 }
 
 html.dark-mode body {
-	font-family: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif;
+	font-family: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif, "Segoe UI Emoji";
 	font-size: inherit;
 	line-height: 1.4;
 	color: #e6e1e8;

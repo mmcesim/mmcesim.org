@@ -4,6 +4,8 @@ title: Home
 nav_order: 1
 has_children: false
 schema: true
+image:
+  path: https://opengraph.wqzhao.org/mmcesim.png
 ---
 
 # Task-Oriented mmWave Channel Estimation

@@ -11,20 +11,9 @@ has_children: false
 Wuqiong Zhao (赵舞穹) is
 also known as [Teddy van Jerry](https://github.com/Teddy-van-Jerry) on GitHub.
 
-## Biography
-
-**Wuqiong Zhao** (*Student Member, IEEE*)
-is an undergraduate student pursuing the Bachelor's Degree in information engineering, working at Lab of Efficient Architectures for Digital-communication and Signal-processing (LEADS) and National Mobile Communications Research Laboratory, Southeast University.
-He is the honors student of Chien-Shiung Wu College
-and earned the National Scholarship and Cyrus Tang Scholarship in 2021.
-From 2020 to 2021, he also served as the Special Student Assistant to President of Southeast University.
-He was also nominated as the most influential undergraduate student of Southeast University in 2022.
-His research interest includes channel estimation, Bayesian algorithms, and the intelligent reflecting surface (IRS) in wireless communication of 5G and 6G.
-He is also the reviewer of IEEE TCAS II and ISCAS 2023.
-
-## Publications
-- **W. Zhao**, Y. You, L. Zhang, X. You, and C. Zhang, [**OMPL-SBL Algorithm for Intelligent Reflecting Surface-Aided mmWave Channel Estimation**](https://ieeexplore.ieee.org/document/10164645), *IEEE Transactions on Vehicular Technology*, 2023, early access, Doi: [10.1109/TVT.2023.3287400](https://doi.org/10.1109/TVT.2023.3287400).
-- Y. You, **W. Zhao**, L. Zhang, X. You, and C. Zhang, **Beam Pattern and Reflection Pattern Design for Channel Estimation in RIS-assisted mmWave MIMO Systems**, *IEEE Transactions on Vehicular Technology*, 2023, to be published.
+View [Wuqiong Zhao's Homepage](https://wqzhao.org),
+[Publications](https://wqzhao.org/publications)
+and [Projects](https://wqzhao.org/projects).
 
 ## Other Open Source Projects
 - [**AHDW**](https://ahdw.org): Parameterized HDL Code Generation (part of the Auto HDW project)
@@ -33,5 +22,5 @@ He is also the reviewer of IEEE TCAS II and ISCAS 2023.
 
 ## Contact
 - Website: [https://wqzhao.org](https://wqzhao.org)
-- E-Mail: wqzhao@seu.edu.cn, wqzhao@ieee.org, me@wqzhao.org
+- E-Mail: me [AT] wqzhao [DOT] org
 - ORCID: [0000-0002-9550-7423](https://orcid.org/0000-0002-9550-7423)

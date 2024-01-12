@@ -28,7 +28,7 @@ aux_links_new_tab: true
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: "Copyright &copy; 2022-2023 <a href=\"https://wqzhao.org\" target=\"_blank\">Wuqiong Zhao</a> (Teddy van Jerry). Distributed by an <a href=\"https://github.com/mmcesim/mmcesim/blob/master/LICENSE\" target=\"_blank\">MIT license.</a>"
+footer_content: "Copyright &copy; 2022-2024 <a href=\"https://wqzhao.org\" target=\"_blank\">Wuqiong Zhao</a> (Teddy van Jerry). Distributed by an <a href=\"https://github.com/mmcesim/mmcesim/blob/master/LICENSE\" target=\"_blank\">MIT license.</a>"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
@@ -61,8 +61,8 @@ nav_external_links:
     hide_icon: false # set to true to hide the external link icon - defaults to false
   - title: mmCEsim Web App
     url: https://app.mmcesim.org
-  - title: mmCEsim Blog
-    url: https://blog.mmcesim.org
+  # - title: mmCEsim Blog
+  #   url: https://blog.mmcesim.org
   - title: mmCEsim Publications
     url: https://pub.mmcesim.org
   - title: mmCEsim Dev Doc
