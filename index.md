@@ -3,7 +3,6 @@ layout: default
 title: Home
 nav_order: 1
 has_children: false
-schema: true
 image:
   path: https://opengraph.wqzhao.org/mmcesim.png
 ---
@@ -51,3 +50,8 @@ you can easily find your own way of development and research with mmCEsim.
 
 ## Notice
 This software is still being developed.
+
+<div itemscope itemtype="https://schema.org/WebSite">
+  <meta itemprop="url" content="https://mmcesim.org"/>
+  <meta itemprop="name" content="mmCEsim"/>
+</div>
