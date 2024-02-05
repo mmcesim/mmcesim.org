@@ -51,6 +51,10 @@ you can easily find your own way of development and research with mmCEsim.
 ## Notice
 This software is still being developed.
 
+{: .note }
+> The documentation is updating from v0.2.2 to v0.3.0.
+> This process can last some time along with the development of the software.
+
 <div itemscope itemtype="https://schema.org/WebSite">
   <meta itemprop="url" content="https://mmcesim.org"/>
   <meta itemprop="name" content="mmCEsim"/>

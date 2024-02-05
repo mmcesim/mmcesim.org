@@ -306,6 +306,85 @@ Example with [`FOR`](#for), [`FOREVER`](#forever), [`IF`](#if),
 [CALL](#call) [standard ALG functions](library) to estimate the sparse channel
 with compressed sensing (CS).
 
+### Explanations
+{: .no_toc }
+
+There are four parameters.
+
+| Position | Parameter Key | Descriptions |
+| :-: | :-: | :- |
+| 1 | `Q` | The sensing matrix. |
+| 2 | `y` | The received signal. |
+| 3 | `nonzero` | The indices vector of non-zero elements. |
+| 4 | `init` | Whether to initialize a variable (boolean). |
+
+### Example
+{: .no_toc }
+
+Estimation for MIMO (with no RIS):
+
+```alg
+VNt::m = NEW `DICTIONARY.T`
+VNr::m = NEW `DICTIONARY.R`
+lambda_hat = INIT `GRID.*`
+Q = INIT `MEASUREMENT` `GRID.*`
+i::u0 = LOOP 0 `PILOT`/`BEAM.T`
+  F_t::m = NEW F_{:,:,i}
+  W_t::m = NEW W_{:,:,i}
+  Q_{i*`BEAM.*`:(i+1)*`BEAM.*`-1,:} = \kron(F_t^T, W_t^H) @ \kron(VNt^*, VNr) # the sensing matrix
+END
+BRANCH
+lambda_hat = ESTIMATE Q y
+RECOVER $VNr @ \reshape(lambda_hat, `GRID.R`, `GRID.T`) @ VNt^H$
+MERGE
+```
+
+Example for Single RIS assisted MIMO:
+
+```alg
+COMMENT STEP 1: Load Dictionary
+VNt::m = NEW `DICTIONARY.T`
+VNr::m = NEW `DICTIONARY.R`
+V_M::m = NEW `DICTIONARY[RIS]`
+V_N::m = NEW \kron(VNt^*, VNr)
+D::m   = INIT `GRID[RIS]` `SIZE[RIS]`
+LOOP 0 `SIZE[RIS]`
+  tmp::v = NEW \kron(V_M_{i,:}^T, V_M_{i,:}^H)
+  D_{:,i} = tmp_{0:`SIZE[RIS]`-1}
+END
+
+COMMENT STEP 2: Compressed Sensing Formulation
+Q::m = INIT `MEASUREMENT` $`GRID.*` * `GRID[RIS]`$ # sensing matrix
+K = NEW `GRID[RIS]` # number of blocks
+T = NEW `PILOT`/`BEAM.T`/K # number of sounding times
+k::u0 = LOOP 0 K
+  t::u0 = LOOP 0 T
+    i::u0 = NEW k * T + t
+    psi::v = NEW Psi_{:,i} # one reflection vector
+    F_t::m = NEW F_{:,:,i}
+    W_t::m = NEW W_{:,:,i}
+    Z_T::m = NEW \kron(F_t^T, W_t^H)
+    first_index::u0 = NEW (k * T + t) * `BEAM.*`
+    last_index::u0  = NEW first_index + `BEAM.*` - 1
+    Q_{first_index:last_index,:} = \kron((D @ psi)^T, Z_T @ V_N)
+  END
+END
+
+COMMENT STEP 3: Calculate Ground Truth
+G_ang::m = NEW VNr^H @ G @ V_M * `GRID.R` * `GRID[RIS]` / `SIZE.R` / `SIZE[RIS]`
+R_ang::m = NEW V_M^H @ R @ VNt * `GRID.T` * `GRID[RIS]` / `SIZE.T` / `SIZE[RIS]`
+J::m = NEW \kron(R_ang^T, G_ang)
+Lambda::m = CALL mergeToLambda J init=true
+
+COMMENT STEP 4: Apply Compressed Sensing Algorithms
+lambda_hat = INIT $`GRID.*` * `GRID[RIS]`$
+BRANCH
+lambda_hat = ESTIMATE Q y
+Lambda_hat::m = NEW \reshape(lambda_hat, `GRID.*`, `GRID[RIS]`)
+RECOVER Lambda_hat Lambda
+MERGE
+```
+
 ***
 
 ## FOR
@@ -617,13 +696,40 @@ Declare the recovered channel.
 ### Explanations
 {: .no_toc }
 
-The NMSE/BER performance is evaluated with the recovered channel specified here
-(the only parameter that needs to be set).
+The NMSE/BER performance is evaluated with the recovered channel specified here.
+
+| Position | Parameter Key | Descriptions |
+| :-: | :-: | :- |
+| 1 | `est` | The estimated (recovered) channel. |
+| 2 | `real` | The real (ground-truth) channel. |
+| 3 | `num` | The total number of `RECOVER` statements. |
+
+The second parameter (`real`) is default as the cascaded channel (of size $$N_r\times N_t$$).
+Therefore, it is necessary for the system with RIS to specify the real channel (which may be of other definitions).
+
+The third parameter (`num`) is used to specify the total number of `RECOVER` statements.
+Therefore, the NMSE result can be scaled correctly.
 
 ### Examples
 {: .no_toc }
 
-[Example of MIMO OFDM](https://github.com/mmcesim/examples/blob/6500ae3021e06b583897f9554e694e86584064f0/MIMO_OFDM_OMP/MIMO_wideband.sim#L110), where `H_hat` is the recovered channel.
+See [examples of `ESTIMATE`](#estimate).
+
+Example of the `num` key.
+
+<div class="code-example" markdown="1">
+
+C++
+```cpp
+NMSE0(ii, 0) += mmce::nmse(H, H_cascaded) / K;
+```
+
+</div>
+```alg
+RECOVER H_hat num=K
+```
+
+<!-- [Example of MIMO OFDM](https://github.com/mmcesim/examples/blob/6500ae3021e06b583897f9554e694e86584064f0/MIMO_OFDM_OMP/MIMO_wideband.sim#L110), where `H_hat` is the recovered channel. -->
 
 ***
 

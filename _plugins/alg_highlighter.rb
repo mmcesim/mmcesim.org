@@ -11,23 +11,26 @@ Jekyll::Hooks.register :site, :pre_render do |site|
     filenames '*.alg', '*.mmcesim-alg'
 
     state :root do
-      rule %r/(BRANCH|BREAK|CALC|CALL|COMMENT|CPP|ESTIMATE|FUNC|INIT|MATLAB|MERGE|NEW|OCTAVE|PRINT|PYTHON|RECOVER|ELSE|ELIF|FOR|FOREVER|FUNCTION|IF|LOOP|WHILE|END|ELSE|ELIF|LOG)\b/, Keyword::Reserved
-      rule %r/(true|false)\b/, Name::Constant
       rule %r/#.*$/, Comment::Single
-
+      rule %r/(COMMENT)(\s)(.*)$/ do
+        groups Keyword::Reserved, Text::Whitespace, Literal::String
+      end
+      rule %r/(BRANCH|BREAK|CALC|CALL|CPP|ESTIMATE|FUNC|INIT|MATLAB|MERGE|NEW|OCTAVE|PRINT|PYTHON|RECOVER|ELSE|ELIF|FOR|FOREVER|FUNCTION|IF|LOOP|WHILE|END|ELSE|ELIF|LOG)\b/, Keyword::Reserved
+      rule %r/(true|false)/, Name::Constant
+      
       rule %r/".*?"/m, Literal::String
       rule %r/'.*?'/m, Literal::String
-
+      
       # for C++ with ::
       rule %r/std::\w+/, Name
-
+      
       rule %r/::[0-9A-Za-z]*/, Keyword::Type
       rule %r/::/, Punctuation # not used
-
+      
       rule %r/\\[0-9A-Za-z_]+/, Name::Function::Magic
-      rule %r/\`(.*?)\`/, Str::Backtick
+      rule %r/\`([\w.\]*\[]+)\`/, Str::Backtick
 
-      rule %r/(begin|cond|end|from|to|step|scale|fill|dtype|key1|key2)=/, Name::Label
+      rule %r/(begin|cond|end|from|init|to|step|scale|fill|dtype|key1|key2|num)=/, Name::Label
 
       rule %r/\^[TtHIi]/, Operator
       rule %r/(\^(\*|\\star|\\ast))|\^\{([TtHIi\*]|\\star|\\ast|-1)\}/, Operator
@@ -53,6 +56,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
       rule %r/\./, Punctuation
       rule %r/,/, Punctuation
       rule %r/;/, Punctuation
+      rule %r/!/, Punctuation
       rule %r/>/, Punctuation
       rule %r/</, Punctuation
       rule %r/\(/, Punctuation
@@ -65,7 +69,7 @@ Jekyll::Hooks.register :site, :pre_render do |site|
 
       rule %r/\s+/, Text::Whitespace
 
-      rule %r/[^:;<>#@"\(\).\[\]\{\} ]+/, Name
+      rule %r/[\w\$]+/, Name
     end
   end
 end

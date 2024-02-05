@@ -32,7 +32,7 @@ please refer to [this blog](https://blog.mmcesim.org/2022/07/file-format-yaml/).
 This field (`version`) takes a string value representing the targeted mmCEsim version.
 For compatibility convenience, this string can be used by the compiler
 to decide the behavior.
-The current default value is the same as the compiler version (`0.2.1`).
+The current default value is the same as the compiler version (`0.3.0`).
 
 ***
 
@@ -96,6 +96,7 @@ For a 2-value array that has the second value set to 1,
 it is still regarded as a ULA.
 
 Its corresponding [macro](../alg/macro)s in [CALC](../alg/calc) are
+`` `SIZE[<id>]` ``, `` `SIZE[<id>].x` ``, `` `SIZE[<id>].y` ``,
 `` `SIZE.T.x` ``, `` `SIZE.T.y` ``, `` `SIZE.T` ``,
 `` `SIZE.R.x` ``, `` `SIZE.R.y` ``, `` `SIZE.R` ``, `` `SIZE.*` ``.
 
@@ -104,6 +105,7 @@ The number of beams.
 Dimensions similar to [Size](#size).
 
 Its corresponding [macro](../alg/macro)s in [CALC](../alg/calc) are
+`` `BEAM[<id>]` ``, `` `BEAM[<id>].x` ``, `` `BEAM[<id>].y` ``,
 `` `BEAM.T.x` ``, `` `BEAM.T.y` ``, `` `BEAM.T` ``,
 `` `BEAM.R.x` ``, `` `BEAM.R.y` ``, `` `BEAM.R` ``, `` `BEAM.*` ``.
 
@@ -114,6 +116,7 @@ This is used in [CALC](../alg/calc) function [`\dictionary`](../alg/calc#diction
 and [macro](../alg/macro) [`` `DICTIONARY.T` ``](../alg/macro#dictionaryt) and [`` `DICTIONARY.R` ``](../alg/macro#dictionaryr).
 
 Its corresponding [macro](../alg/macro)s in [CALC](../alg/calc) are
+`` `GRID[<id>]` ``, `` `GRID[<id>].x` ``, `` `GRID[<id>].y` ``,
 `` `GRID.T.x` ``, `` `GRID.T.y` ``, `` `GRID.T` ``,
 `` `GRID.R.x` ``, `` `GRID.R.y` ``, `` `GRID.R` ``, `` `GRID.*` ``.
 
@@ -122,6 +125,14 @@ In the `beamforming` field, the variable name `variable` is set,
 and the beamforming scheme `scheme` is defined.
 The `scheme` supports `random` and `custom`.
 For a custom beamforming scheme, you also need to set the `formula` field with ALG language.
+
+The random active beamforming scheme (for Tx and Rx) is defined in
+[`/include/mmcesim/sys/random_RIS_BF.alg`](https://github.com/mmcesim/mmcesim/blob/master/include/mmcesim/sys/random_RIS_BF.alg)
+as
+```alg
+`VAR` = \randn(SIZE, TIMES) # generate random
+`VAR` = `VAR` / \abs(Psi)   # normalize
+```
 
 ***
 

@@ -26,7 +26,7 @@ has_children: false
 
 With `mmcesim -h`, you can view all supported commands and options.
 ```
-mmCEsim 0.2.1  (C) 2022-2023 Wuqiong Zhao
+mmCEsim 0.3.0  (C) 2022-2024 Wuqiong Zhao
 Millimeter Wave Channel Estimation Simulation
 =============================================
 
@@ -63,12 +63,12 @@ The Application is currently under active development.
 ## Commands
 
 ### exp
-Command `exp` exports the `.sim` configuration and corresponding
+Command `exp` (or `export`) exports the `.sim` configuration and corresponding
 `.alg` algorithms to a selected language.
 Currently, only export to C++ with Armadillo is supported.
 
 ### sim
-Command `sim` simulates the exported code with the selected backend.
+Command `sim` (or `simulate`) simulates the exported code with the selected backend.
 Currently, only C++ with Armadillo is supported.
 
 So far, only C++ compiler `g++` (default) and `clang++` are supported
@@ -77,21 +77,24 @@ You may also need to configure additional C++ flags with `cfg cppflags`
 if by default the compiler cannot find [`armadillo`](https://arma.sourceforge.net) library.
 
 ### dbg
-Debug the simulation.
+Debug the simulation (`dbg` or `debug`).
 This is different from [`sim`](#sim) in that the generated C++ code is compiled with `-g3` instead of `-O3`.
 Therefore, debug information is retained.
 
 ### cfg
-Configure settings.
+Configure settings (`cfg` or `config`).
 
 - Use `mmcesim cfg <name>` to show the value of `<name>`.
 - Use `mmcesim cfg <name> --value=<value>` to set the value of `<name>` as `<value>`.
 
-*Example* ([`mac_config_cppflags_tvj.sh`](https://github.com/mmcesim/mmcesim/blob/master/scripts/mac_config_cppflags_tvj.sh)):
+*Example* ([`mac_config_cppflags_brew.sh`](https://github.com/mmcesim/mmcesim/blob/master/scripts/mac_config_cppflags_brew.sh)):
 ```sh
-mmcesim cfg cpp --value="clang++"
-mmcesim cfg cppflags --value="-I/opt/local/include -L/opt/local/lib"
+mmcesim config cpp --value="clang++"
+mmcesim config cppflags --value="-I/opt/homebrew/include -L/opt/homebrew/lib"
 ```
+
+{: .tip }
+> Use `mmcesim cfg ALL` to view all configured options. (`ALL` should be in UPPERCASE.)
 
 
 ## Options
@@ -139,3 +142,7 @@ Disable colorful terminal contents.
 
 When you have a non-empty `NO_COLOR` environmental variable,
 the color output is disabled, and you no longer need the `--no-term-color` option.
+
+**For developers:**
+`NO_COLOR=1` is set as an environment variable for CTest.
+This will make the terminal output more readable.
